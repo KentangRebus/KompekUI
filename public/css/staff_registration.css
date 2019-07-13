@@ -1,6 +1,33 @@
-header{
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: auto;
-    padding: 100px;
+    height: 100px;
     background: #800;
+    display: flex;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+.heading {
+    margin: 120px 0 10px 80px;
+    border-left: 6px solid #b60000;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+}
+
+#content{
+    background-image: url("../images/bg02.png");
+    background-size: cover;
+}
+
+.option-field{
+    outline: none; width: 300px; height: 26px;
+}
+
+.input-field{
+    width: 300px;
 }
