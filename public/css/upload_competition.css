@@ -9,7 +9,7 @@ header {
     font-weight: bold;
 }
 
-#menu{
+#menu {
     display: flex;
     width: 100%;
 }
@@ -24,15 +24,36 @@ header {
     border-left: 6px solid #b60000;
 }
 
-#content{
+#content {
     background-image: url("../images/bg02.png");
     background-size: cover;
 }
 
-.option-field{
-    outline: none; width: 300px; height: 26px;
+.option-field {
+    outline: none;
+    width: 300px;
+    height: 26px;
 }
 
-.input-field{
+.input-field {
     width: 300px;
+}
+
+.td-w-250 {
+    width: 250px;
+}
+
+.color-light-red {
+    color: #b60000;
+}
+
+.decor-u {
+    text-decoration: underline;
+}
+
+.upload-btn {
+    border: 1px solid grey;
+    width: 300px;
+    padding: 2px;
+    border-radius: 5px;
 }

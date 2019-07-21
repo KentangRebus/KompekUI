@@ -36,3 +36,22 @@ header {
 .input-field{
     width: 300px;
 }
+
+.td-w-250{
+    width: 250px;
+}
+
+.color-light-red{
+    color: #b60000;
+}
+
+.decor-u{
+    text-decoration: underline;
+}
+
+.upload-btn {
+    border: 1px solid grey;
+    width: 300px;
+    padding: 2px;
+    border-radius: 5px;
+}
