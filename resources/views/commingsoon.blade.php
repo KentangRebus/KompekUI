@@ -7,12 +7,13 @@
     <link rel="stylesheet" type="text/css" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+    <link rel="icon" href="{{asset('images/K22_logo.png')}}">
 </head>
 <body>
 <div class="bg-img1 overlay1 size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15" style="background-image: url({{asset('images/bg01.jpg')}});">
     <div class="wsize1">
-        <p class="txt-center p-b-23">
-            <img src="{{asset('images/logo_white_small.png')}}" style="width: 350px">
+        <p class="txt-center">
+            <img src="{{asset('images/K22_logo_wh.png')}}" style="width: 350px">
         </p>
 
         <h3 class="l1-txt1 txt-center p-b-22">

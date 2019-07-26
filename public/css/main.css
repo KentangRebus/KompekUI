@@ -308,10 +308,10 @@ input.input100 {
   top: 0;
   left: 0;
   background: #61045f;
-  background: -webkit-linear-gradient(bottom, #c7512d, #880000);
-  background: -o-linear-gradient(bottom, #c7512d, #880000);
-  background: -moz-linear-gradient(bottom, #c7512d, #880000);
-  background: linear-gradient(bottom, #c7512d, #880000);
+  background: -webkit-linear-gradient(bottom, #e77551, #b60000);
+  background: -o-linear-gradient(bottom, #e77551, #b60000);
+  background: -moz-linear-gradient(bottom, #e77551, #b60000);
+  background: linear-gradient(bottom, #e77551, #b60000);
   opacity: 0.9;
 }
 
