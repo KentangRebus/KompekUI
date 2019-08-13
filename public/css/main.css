@@ -1,3 +1,35 @@
+header{
+  background-color: darkred;
+  color: white;
+}
+
+header a{
+  color: white !important;
+  text-decoration: none;
+}
+
+header img{
+  width: 130px;
+  margin-left: 30px;
+  padding: 10px;
+}
+
+header nav ul li{
+  padding: 20px 25px;
+  font-size: 20px;
+}
+
+footer {
+  background-color: darkred;
+  color: white;
+  padding-top: 35px;
+}
+
+.soc-item{
+  font-size: 20px;
+  margin-right: 40px;
+}
+
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/Poppins/Poppins-Regular.ttf');
