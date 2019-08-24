@@ -1,0 +1,163 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: #800;
+    display: flex;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+#identifier{
+    font-size: 30px;
+}
+
+#menu{
+    display: flex;
+    width: 100%;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+}
+
+.heading {
+    margin-left: 20px;
+    border-left: 6px solid #b60000;
+    font-size: 25px;
+}
+
+#content{
+    background-image: url("../images/bg02.png");
+    background-size: cover;
+}
+
+.option-field{
+    outline: none; width: 300px; height: 26px;
+}
+
+.input-field{
+    width: 300px;
+}
+
+#timeTable{
+    padding-top: 20px;
+    text-align: center;
+}
+
+table#timeTable th {
+    background-color: #800;
+    color: white;
+    padding: 2px 10px;
+}
+
+table#timeTable tr:nth-child(even) {
+    background-color: #b60000;
+    color: white;
+}
+table#timeTable tr:nth-child(odd) {
+    background-color: #fff;
+    color: black;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 22px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 50px;
+    background-color: transparent;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #c7512d;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #e77551;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 500px){
+    #mid-content{
+        flex-direction: column;
+    }
+
+    #identifier{
+        font-size: 26px;
+    }
+
+    .input-field{
+        width: 190px;
+    }
+
+    .option-field{
+        outline: none;
+        width: 190px;
+        height: 26px;
+    }
+
+    .heading{
+        font-size: 22px;
+    }
+
+    .lbl{
+        font-size: 15px;
+    }
+
+    .pad{
+        padding-right: 18px;
+    }
+}

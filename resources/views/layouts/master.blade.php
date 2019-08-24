@@ -9,21 +9,33 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <link rel="icon" href="{{asset('images/K22_logo.png')}}">
-    <script src="https://kit.fontawesome.com/51221b6931.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/all.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/brands.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/fontawesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/solid.min.css')}}">
+    @yield('more_link')
 </head>
 <body>
     <header class="d-flex flex-row">
-        <img src="{{asset('images/nav_logo.png')}}" alt="">
+        <img src="{{asset('images/nav_logo.png')}}" alt="" onclick="redirectTo('/Home')">
         <nav>
             <ul class="d-flex flex-row">
-                <li><a href="/Home">HomePage</a></li>
-                <li>Registration</li>
-                <li><a href="/FAQ">FAQ</a></li>
+                <li onclick="redirectTo('/Home')"><a href="/Home">Home</a></li>
+                <li class="dropdown">
+                    <a href="">Registration</a>
+                    <div class="dropdown-content">
+                        <a href="/CompetitionRegistration">Competition Registration</a>
+                        <a href="/StaffRegistrationForm">Staff Registration</a>
+                    </div>
+                </li>
+                <li onclick="redirectTo('/FAQ')"><a href="/FAQ">FAQ</a></li>
             </ul>
         </nav>
     </header>
 
-    @yield('content')
+    <main>
+        @yield('content')
+    </main>
 
     <footer>
         <div class="d-flex flex-row justify-content-around pb-5">
@@ -88,4 +100,10 @@
         </div>
     </footer>
 </body>
+<script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/fontawesome/all.min.js')}}"></script>
+<script src="{{asset('js/fontawesome/brands.min.js')}}"></script>
+<script src="{{asset('js/fontawesome/fontawesome.min.js')}}"></script>
+<script src="{{asset('js/fontawesome/solid.min.js')}}"></script>
+@yield('more_script')
 </html>

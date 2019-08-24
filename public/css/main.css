@@ -1,6 +1,7 @@
 header{
   background-color: darkred;
   color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 header a{
@@ -8,15 +9,59 @@ header a{
   text-decoration: none;
 }
 
+header nav {
+  margin-left: 20px;
+  z-index: 10;
+}
+
 header img{
   width: 130px;
   margin-left: 30px;
   padding: 10px;
+  cursor: pointer;
 }
 
 header nav ul li{
-  padding: 20px 25px;
-  font-size: 20px;
+   padding: 22px 25px;
+   font-size: 20px;
+   cursor: pointer;
+  transition: 0.3s;
+ }
+
+header nav ul li:hover{
+  background-color: rgb(119,0,0);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: darkred;
+  top: 72px;
+  left: 0px;
+  min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 25px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(119,0,0);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 footer {
@@ -55,6 +100,207 @@ footer {
   src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf');
 }
 
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+  height: 700px;
+  object-fit: cover;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.testimonialSlides{
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 80px;
+}
+
+.text p {
+  color: white;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+#mainLogo{
+  width: 350px;
+}
+
+.bdr-red{
+  border: 4px solid darkred;
+}
+
+.text-dr{
+  color: darkred;
+}
+
+#announcement-container{
+  padding: 10px 25px;
+  width: 400px;
+}
+
+#announcement-container h2{
+  padding: 5px 75px;
+}
+
+.ann-item {
+  font-size: 14px;
+}
+
+#testimonial-container{
+  width: 350px;
+  padding: 20px 25px;
+  overflow: hidden;
+}
+
+.testi-item{
+  text-align: center;
+}
+
+.testi-item img{
+  width: 200px;
+}
+
+#timeline-container{
+  width: 400px;
+  text-align: center;
+}
+
+.comp-container{
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.comp-title{
+  width: 50%;
+  min-height: 350px;
+}
+.comp-title h1{
+  font-size: 95px;
+  font-weight: bold;
+  padding: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.comp-hvr{
+  transition: .4s ease-in-out;
+}
+
+.comp-title:hover .comp-hvr{
+  display: none;
+}
+
+.comp-title:hover .comp-item{
+  display: block;
+}
+
+.comp-item{    
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  display: none;
+  animation-name: disolve;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.comp-item img{
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.comp-title:hover .comp-item{
+  display: block;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.7s;
+  animation-name: fade;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+}
+
+.slide {
+  /*animation: fade 2s ease-in-out;*/
+  /*animation-name: slide;*/
+  /*animation-duration: 2s;*/
+  /*animation-fill-mode: forwards;*/
+}
+
+@keyframes fade {
+  0% {opacity: .5}
+  100% {opacity: 1}
+}
+
+@keyframes disolve {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.coverColor{
+  width: 100%;
+  height: 700px;
+  background-color: rgba(115,10,10, 0.4);
+  position: absolute;
+  top: 0px;
+  /*z-index: 1;*/
+}
+
+.text-wh{
+  color: white;
+}
 
 .container {max-width: 1200px;}
 

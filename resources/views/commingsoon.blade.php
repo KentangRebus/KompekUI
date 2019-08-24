@@ -63,7 +63,7 @@
     let minutesSpan = document.getElementsByClassName('minutes');
     let secondsSpan = document.getElementsByClassName('seconds');
 
-    let countDownDate = new Date('August 25 2019 00:00');
+    let countDownDate = new Date('September 1 2019 12:00');
 
     function updateClock() {
 
