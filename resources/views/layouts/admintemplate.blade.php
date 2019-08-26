@@ -42,7 +42,7 @@
         <button class="navbar-toggler sidebar-toggler" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <h2 class="line-1 anim-typewriter">Welcome Admin Kompek 2019!</h2>
+        <h2 class="line-1 anim-typewriter">Welcome Admin Kompek 2019</h2>
     </header>
     <div class="app-body">
         <div class="sidebar">
@@ -50,28 +50,33 @@
                 <ul class="nav">
                     <li class="nav-title">Menu</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/">
                             <i class="nav-icon cui-speedometer"></i> Answer
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/">
                             <i class="nav-icon cui-user"></i> Participant
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/">
                             <i class="nav-icon cui-layers "></i> Case
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/">
                             <i class="nav-icon cui-share "></i> Announcement
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/">
                             <i class="nav-icon cui-user "></i> Staff
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="nav-icon cui-account-logout"></i> Log Out
                         </a>
                     </li>
                 </ul>
