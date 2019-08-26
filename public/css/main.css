@@ -185,6 +185,12 @@ footer {
   font-size: 16px;
 }
 
+.rings{
+  width: 90px;
+  position: absolute;
+  left: 70px;
+}
+
 #announcement-container{
   padding: 10px 25px;
   width: 400px;

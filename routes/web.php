@@ -20,3 +20,6 @@ Route::get('/CompetitionRegistration', function () {
 Route::get('/LoginAdminKompek', function () {
     return view('adminlogin');
 });
+Route::get('/AdminKompekPage', function () {
+    return view('adminparticipant');
+});
