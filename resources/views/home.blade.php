@@ -45,7 +45,7 @@
                 KOMPeK adalah kompetisi ekonomi berskala nasional yang diadakan oleh mahasiswa Fakultas Ekonomi dan Bisnis Universitas Indonesia untuk siswa-siswi SMA/sederajat dari seluruh Indonesia. Sejalan dengan visinya memberikan kontribusi nyata untuk perkembangan pendidikan yang berkualitas di Indonesia, KOMPeK merupakan sebuah bentuk pengabdian entitas Fakultas Ekonomi dan Bisnis Universitas Indonesia pada dunia pendidikan Indonesia.
             </p>
         </div>
-        <div class="d-flex flex-row text-dr p-5 justify-content-md-around mb-3">
+        <div class="d-flex flex-row text-dr p-5 justify-content-md-around mb-5">
             <div class="bdr-red" id="announcement-container">
                 <h2 style="border-bottom: 2px solid; font-weight: bold" class="mb-4">Announcement</h2>
             {{-- announcement items --}}
@@ -106,11 +106,13 @@
             </div>
             <div id="timeline-container">
                 <h2>TIMELINE</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur dolores eius error perferendis recusandae, voluptas! Alias animi error ex, itaque laudantium magnam nulla omnis perferendis quam qui sequi totam?
+
+                <img src="{{asset('images/timeline.png')}}" alt="" style="width: 450px">
+                
             </div>
         </div>
 
-        <div class="mt-4 flex-row flex-lg-wrap comp-container">
+        <div class="mt-5 flex-row flex-lg-wrap comp-container">
             <div class="text-dr comp-title">
                 <h1 class="comp-hvr">EQ</h1>
                 <div class="bdr-red comp-item">

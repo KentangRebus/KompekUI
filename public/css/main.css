@@ -175,6 +175,16 @@ footer {
   color: darkred;
 }
 
+.question-tag{
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.answer-tag{
+  color: black;
+  font-size: 16px;
+}
+
 #announcement-container{
   padding: 10px 25px;
   width: 400px;
