@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/coreui-icons.min.css">
+    @yield('adminMoreLink')
     <title>Admin</title>
 </head>
 <style>
@@ -50,32 +51,32 @@
                 <ul class="nav">
                     <li class="nav-title">Menu</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="/AdminKompekPage/Answer">
                             <i class="nav-icon cui-speedometer"></i> Answer
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="/AdminKompekPage/Participant">
                             <i class="nav-icon cui-user"></i> Participant
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="/AdminKompekPage/Case">
                             <i class="nav-icon cui-layers "></i> Case
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="/AdminKompekPage/Announcement">
                             <i class="nav-icon cui-share "></i> Announcement
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="/AdminKompekPage/Staff">
                             <i class="nav-icon cui-user "></i> Staff
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="/">
                             <i class="nav-icon cui-account-logout"></i> Log Out
                         </a>
                     </li>
@@ -94,5 +95,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
+@yield('adminMoreScript')
 </body>
 </html>

@@ -15,7 +15,15 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/solid.min.css')}}">
     @yield('more_link')
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");;
+    });
+</script>
 <body>
+    <div class="se-pre-con"></div>
     <header class="d-flex flex-row">
         <img src="{{asset('images/nav_logo.png')}}" alt="" onclick="redirectTo('/Home')">
         <nav>
@@ -96,14 +104,14 @@
             </div>
         </div>
         <div style="background: maroon; padding: 10px; font-size: 12px">
-            © 2019 KOMPek 22nd FEB UI | In Partnership with: vendor
+            © 2019 KOMPek 22nd FEB UI | In Partnership with: LASF
         </div>
     </footer>
-</body>
 <script src="{{asset('js/custom.js')}}"></script>
 <script src="{{asset('js/fontawesome/all.min.js')}}"></script>
 <script src="{{asset('js/fontawesome/brands.min.js')}}"></script>
 <script src="{{asset('js/fontawesome/fontawesome.min.js')}}"></script>
 <script src="{{asset('js/fontawesome/solid.min.js')}}"></script>
 @yield('more_script')
+</body>
 </html>

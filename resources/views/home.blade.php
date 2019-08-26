@@ -112,8 +112,10 @@
                 
             </div>
         </div>
-
-        <div class="mt-5 flex-row flex-lg-wrap comp-container">
+        <div class="pl-5 pr-5 pt-5 pb-5">
+            <hr>
+        </div>
+        <div class="mt-5 flex-row flex-lg-wrap comp-container" style="background: url("{{ asset('images/patternHome.png') }}"); ">
             <div class="text-dr comp-title">
                 <h1 class="comp-hvr">EQ</h1>
                 <div class="bdr-red comp-item">
@@ -151,6 +153,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 @stop
