@@ -24,11 +24,12 @@ Route::get('/LoginAdminKompek', function () {
     return view('adminlogin');
 });
 
-Route::group(['middleware' => ['web']], function (){
+Route::group(['middleware' => ['web', 'adminAuth']], function (){
 
     Route::get('/AdminKompekPage/Participant', function () {
         return view('adminparticipant');
     });
+
     Route::get('/AdminKompekPage/Case', function () {
         return view('admincase');
     });
