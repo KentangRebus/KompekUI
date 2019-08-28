@@ -26,25 +26,28 @@ Route::get('/LoginAdminKompek', function () {
     return view('adminlogin');
 });
 
-Route::group(['middleware' => ['web']], function (){
+Route::get('/AdminKompekPage/Participant', function () {
+    return view('adminparticipant');
+})->middleware('adminAuth');
 
-    Route::get('/AdminKompekPage/Participant', function () {
-        return view('adminparticipant');
-    });
-    Route::get('/AdminKompekPage/Case', function () {
-        return view('admincase');
-    });
-    Route::get('/AdminKompekPage/Answer', function () {
-        return view('adminanswer');
-    });
-    Route::get('/AdminKompekPage/Announcement', function () {
-        return view('adminannouncement');
-    });
-    Route::get('/AdminKompekPage/Staff', function () {
-        return view('adminstaff');
-    });
-    
-});
+Route::get('/AdminKompekPage/Case', function () {
+    return view('admincase');
+})->middleware('adminAuth');
+
+Route::get('/AdminKompekPage/Answer', function () {
+    return view('adminanswer');
+})->middleware('adminAuth');
+
+Route::get('/AdminKompekPage/Announcement', function () {
+    return view('adminannouncement');
+})->middleware('adminAuth');
+
+Route::get('/AdminKompekPage/Staff', function () {
+    return view('adminstaff');
+})->middleware('adminAuth');
+
+//Route::group(['middleware' => ['web']], function (){
+//});
 
 
 

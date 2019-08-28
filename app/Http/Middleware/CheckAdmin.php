@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Session;
 
 class CheckAdmin
 {
@@ -15,7 +16,10 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if ($request->session()->has('adminToken'))
+        if(!Session::has('adminKey')){
+            $request->session()->flash('msg', 'You need to login');
+            return redirect('/LoginAdminKompek');
+        }
 
         return $next($request);
     }
