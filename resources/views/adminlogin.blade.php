@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="{{asset('css/mainadmin.css')}}">
 </head>
 <body>
-
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
@@ -31,7 +30,9 @@
                     <input class="input100" type="password" name="pass">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
-
+                @if(\Illuminate\Support\Facades\Session::has('msg'))
+                    <div style="text-align: center; color: red">{{\Illuminate\Support\Facades\Session::get('msg')}}</div>
+                @endif
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
@@ -40,6 +41,7 @@
                         </button>
                     </div>
                 </div>
+
             </form>
         </div>
     </div>
