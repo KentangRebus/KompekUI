@@ -13,6 +13,7 @@
         <h1 class="text-center mt-3 mt-4">Manage Announcement</h1>
 
         <form action="" class="mt-4" style="width: 70%; margin: 0 auto;">
+            @csrf
             <div class="form-group">
                 <label>What the news ?</label>
                 <textarea class="form-control" id="" rows="3"></textarea>

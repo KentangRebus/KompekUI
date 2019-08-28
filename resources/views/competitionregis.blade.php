@@ -12,6 +12,8 @@
                 <span class="color-black fw-bold"> &nbsp Competition Registration </span>
             </div>
 
+        <form action="">
+            @csrf
             <div id="mid-content" class="dis-flex">
                 <div class="w-50">
                     <table style="margin: 10px 0 10px 20px; border-spacing: 0 15px; border-collapse: separate;;">
@@ -88,5 +90,7 @@
             <div class="dis-flex flex-c flex-m">
                 <button id="register_btn" class=""> Submit</button>
             </div>
+        </form>
+
     </div>
 @stop

@@ -25,18 +25,30 @@ Route::get('/UploadAnswer', function () {
 Route::get('/LoginAdminKompek', function () {
     return view('adminlogin');
 });
-Route::get('/AdminKompekPage/Participant', function () {
-    return view('adminparticipant');
+
+Route::group(['middleware' => ['web']], function (){
+
+    Route::get('/AdminKompekPage/Participant', function () {
+        return view('adminparticipant');
+    });
+    Route::get('/AdminKompekPage/Case', function () {
+        return view('admincase');
+    });
+    Route::get('/AdminKompekPage/Answer', function () {
+        return view('adminanswer');
+    });
+    Route::get('/AdminKompekPage/Announcement', function () {
+        return view('adminannouncement');
+    });
+    Route::get('/AdminKompekPage/Staff', function () {
+        return view('adminstaff');
+    });
+    
 });
-Route::get('/AdminKompekPage/Case', function () {
-    return view('admincase');
-});
-Route::get('/AdminKompekPage/Answer', function () {
-    return view('adminanswer');
-});
-Route::get('/AdminKompekPage/Announcement', function () {
-    return view('adminannouncement');
-});
-Route::get('/AdminKompekPage/Staff', function () {
-    return view('adminstaff');
-});
+
+
+
+
+//Route::middlewawre('nama')->group(function(){
+//
+//});
