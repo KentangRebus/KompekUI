@@ -37,7 +37,7 @@
                         <form method="get" action="{{url("/AdminKompekPage/AnnouncementDelete/".$data[$i]->announcement_id)}}">
                             <th scope="row">{{$i+1}}</th>
                             <td> {{$data[$i]->announcement}} </td>
-                            <td>12/5/2018</td>
+                            <td> {{$data[$i]->created_at}} </td>
                             <td>
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </td>
