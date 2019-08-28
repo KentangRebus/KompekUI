@@ -4,9 +4,7 @@ Route::get('/', function () {
     return view('commingsoon');
 });
 
-Route::get('/Home', function () {
-    return view('home');
-});
+Route::get('/Home', 'HomeController@index');
 
 Route::get('/FAQ', function () {
     return view('FAQ');
@@ -37,9 +35,10 @@ Route::group(['middleware' => ['web']], function (){
     Route::get('/AdminKompekPage/Answer', function () {
         return view('adminanswer');
     });
-    Route::get('/AdminKompekPage/Announcement', function () {
-        return view('adminannouncement');
-    });
+
+    Route::resource('/AdminKompekPage/Announcement', "AnnouncementController");
+    Route::get('/AdminKompekPage/AnnouncementDelete/{id}', "AnnouncementController@destroy");
+
     Route::get('/AdminKompekPage/Staff', function () {
         return view('adminstaff');
     });

@@ -12,11 +12,11 @@
     <div>
         <h1 class="text-center mt-3 mt-4">Manage Announcement</h1>
 
-        <form action="" class="mt-4" style="width: 70%; margin: 0 auto;">
+        <form action="{{url("/AdminKompekPage/Announcement")}}" method="post" class="mt-4" style="width: 70%; margin: 0 auto;">
             @csrf
             <div class="form-group">
                 <label>What the news ?</label>
-                <textarea class="form-control" id="" rows="3"></textarea>
+                <textarea name="announcement" class="form-control" id="" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
@@ -32,23 +32,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad eaque itaque nobis officiis praesentium quam sapiente tenetur? Amet architecto eos fugit id libero, nisi nulla officia optio suscipit unde?</td>
-                    <td>12/5/2018</td>
-                    <td>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad eaque itaque nobis officiis praesentium quam sapiente tenetur? Amet architecto eos fugit id libero, nisi nulla officia optio suscipit unde?</td>
-                    <td>12/5/2018</td>
-                    <td>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
-
+                @for($i = 0; $i < count($data); $i++)
+                    <tr>
+                        <form method="get" action="{{url("/AdminKompekPage/AnnouncementDelete/".$data[$i]->announcement_id)}}">
+                            <th scope="row">{{$i+1}}</th>
+                            <td> {{$data[$i]->announcement}} </td>
+                            <td>12/5/2018</td>
+                            <td>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </td>
+                        </form>
+                    </tr>
+                @endfor
                 </tbody>
             </table>
         </div>

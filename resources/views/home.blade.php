@@ -48,19 +48,14 @@
         <div class="d-flex flex-row text-dr p-5 justify-content-md-around mb-5">
             <div class="bdr-red" id="announcement-container">
                 <h2 style="border-bottom: 2px solid; font-weight: bold" class="mb-4">Announcement</h2>
-                {{-- announcement items --}}
-                <div class="ann-item mb-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex expedita fugiat maxime nam placeat quam, repudiandae suscipit ullam! Ad aperiam facere, impedit in laudantium magnam nam quia sed.</p>
-                    <hr>
-                </div>
-                <div class="ann-item mb-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex expedita fugiat maxime nam placeat quam, repudiandae suscipit ullam! Ad aperiam facere, impedit in laudantium magnam nam quia sed.</p>
-                    <hr>
-                </div>
-                <div class="ann-item mb-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex expedita fugiat maxime nam placeat quam, repudiandae suscipit ullam! Ad aperiam facere, impedit in laudantium magnam nam quia sed.</p>
-                    <hr>
-                </div>
+                @for($i = 0; $i < 3; $i++)
+                    <div class="ann-item mb-4">
+                        <p>
+                            {{ $data[$i]->announcement }}
+                        </p>
+                        <hr>
+                    </div>
+                @endfor
 
                 <img src="{{asset('images/ring1.png')}}" alt="" class="rings">
             </div>
