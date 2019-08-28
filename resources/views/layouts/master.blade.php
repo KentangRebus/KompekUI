@@ -19,7 +19,7 @@
 <script>
     $(window).load(function() {
         // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
+        $(".se-pre-con").fadeOut("slow");
     });
 </script>
 <body>
@@ -36,6 +36,7 @@
                         <a href="/StaffRegistrationForm">Staff Registration</a>
                     </div>
                 </li>
+                <li onclick="redirectTo('/UploadAnswer')"><a href="/UploadAnswer">Upload</a></li>
                 <li onclick="redirectTo('/FAQ')"><a href="/FAQ">FAQ</a></li>
             </ul>
         </nav>

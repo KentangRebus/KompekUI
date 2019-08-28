@@ -17,6 +17,11 @@ Route::get('/StaffRegistrationForm', function () {
 Route::get('/CompetitionRegistration', function () {
     return view('competitionregis');
 });
+Route::get('/UploadAnswer', function () {
+    return view('uploadanswer');
+});
+
+//admin site
 Route::get('/LoginAdminKompek', function () {
     return view('adminlogin');
 });
