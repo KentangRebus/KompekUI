@@ -49,14 +49,14 @@
             <div class="bdr-red" id="announcement-container">
                 <h2 style="border-bottom: 2px solid; font-weight: bold" class="mb-4">Announcement</h2>
                 <img src="{{asset('images/ring1.png')}}" alt="" class="rings">
-                @for($i = 0; $i < 3; $i++)
+                @foreach($data as $d)
                     <div class="ann-item mb-4">
                         <p>
-                            {{ $data[$i]->announcement }}
+                            {{ $d->announcement }}
                         </p>
                         <hr>
                     </div>
-                @endfor
+                @endforeach
 
             </div>
             <div class="bdr-red" id="testimonial-container">

@@ -76,7 +76,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="/AdminKompekPage/LogOut">
                             <i class="nav-icon cui-account-logout"></i> Log Out
                         </a>
                     </li>

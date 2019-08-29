@@ -47,6 +47,8 @@ Route::group(['middleware' => ['web', 'adminAuth']], function (){
     Route::get('/AdminKompekPage/Staff', function () {
         return view('adminstaff');
     });
+
+    Route::get('/AdminKompekPage/LogOut', 'AdminController@logOut');
     
 });
 
