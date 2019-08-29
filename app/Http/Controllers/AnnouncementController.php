@@ -37,7 +37,7 @@ class AnnouncementController extends Controller
     public function store(Request $request)
     {
         $data = new Announcement();
-        $data->announcement = $request->announcement;
+        $data->announcement = htmlentities($request->announcement);
 
         $data->save();
 
