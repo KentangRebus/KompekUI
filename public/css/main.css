@@ -201,6 +201,7 @@ footer {
   width: 90px;
   position: absolute;
   left: 70px;
+  bottom: -580px;
 }
 
 #announcement-container{

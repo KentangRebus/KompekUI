@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('commingsoon');
 });
@@ -23,6 +25,8 @@ Route::get('/UploadAnswer', function () {
 Route::get('/LoginAdminKompek', function () {
     return view('adminlogin');
 });
+
+Route::post('LoginAdminKompek', 'AdminController@find')->middleware('web');
 
 Route::group(['middleware' => ['web', 'adminAuth']], function (){
 
