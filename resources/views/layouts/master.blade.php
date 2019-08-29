@@ -30,7 +30,7 @@
             <ul class="d-flex flex-row">
                 <li onclick="redirectTo('/Home')"><a href="/Home">Home</a></li>
                 <li class="dropdown">
-                    <a href="">Registration</a>
+                    Registration
                     <div class="dropdown-content">
                         <a href="/CompetitionRegistration">Competition Registration</a>
                         @if(\Illuminate\Support\Facades\Session::get('status') == 1)
