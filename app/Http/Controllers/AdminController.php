@@ -31,7 +31,7 @@ class AdminController extends Controller
     public function logOut()
     {
         Session::flush();
-        return view('home');
+        return redirect('/Home');
     }
 
     /**

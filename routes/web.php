@@ -34,9 +34,8 @@ Route::group(['middleware' => ['web', 'adminAuth']], function (){
     Route::get('/AdminKompekPage/ParticipantList/{id}', "ParticipantController@showByCompetition");
     Route::get('/AdminKompekPage/ParticipantDelete/{id}',"ParticipantController@destroy");
 
-    Route::get('/AdminKompekPage/Case', function () {
-        return view('admincase');
-    });
+    Route::resource('/AdminKompekPage/Case', 'CasefileController');
+
     Route::get('/AdminKompekPage/Answer', function () {
         return view('adminanswer');
     });
