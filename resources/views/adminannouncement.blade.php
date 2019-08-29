@@ -12,7 +12,7 @@
     <div>
         <h1 class="text-center mt-3 mt-4">Manage Announcement</h1>
 
-        <form action="{{url("/AdminKompekPage/Announcement")}}" method="post" class="mt-4" style="width: 70%; margin: 0 auto;">
+        <form method="post" action="{{url("/AdminKompekPage/Announcement")}}" class="mt-4" style="width: 70%; margin: 0 auto;">
             @csrf
             <div class="form-group">
                 <label>What the news ?</label>

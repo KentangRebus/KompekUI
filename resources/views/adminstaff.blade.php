@@ -27,59 +27,37 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>0000000000</td>
-                <td>Otto</td>
-                <td>Accounting</td>
-                <td>+6287720291347</td>
-                <td>xxxxxxxxxxxxxxx</td>
-                <td>
-                    <ol style="padding-left: 0">
-                        <li>Transport and Accomodation</li>
-                        <li>Transport and Accomodation</li>
-                        <li>Transport and Accomodation</li>
-                    </ol>
-                </td>
-                <td>
-                    <ul style="padding-left: 0">
-                        <li>Mo 1</li>
-                        <li>Tu 2</li>
-                        <li>Th 2</li>
-                        <li>We 2</li>
-                        <li>Fr 2</li>
-                    </ul>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>0000000000</td>
-                <td>Otto</td>
-                <td>Accounting</td>
-                <td>+6287720291347</td>
-                <td>xxxxxxxxxxxxxxx</td>
-                <td>
-                    <ol style="padding-left: 0">
-                        <li>Transport and Accomodation</li>
-                        <li>Transport and Accomodation</li>
-                        <li>Transport and Accomodation</li>
-                    </ol>
-                </td>
-                <td>
-                    <ul style="padding-left: 0">
-                        <li>Mo 1</li>
-                        <li>Tu 2</li>
-                        <li>Th 2</li>
-                        <li>We 2</li>
-                        <li>Fr 2</li>
-                    </ul>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
-
+            @for($i = 0; $i < count($data); $i++)
+                <tr>
+                    <form method="get" action="{{url("/AdminKompekPage/StaffDelete/".$data[$i]->staff_id)}}">
+                        @csrf
+                        <td>{{$data[$i]->staff_student_id}}</td>
+                        <td>{{$data[$i]->staff_name}}</td>
+                        <td>{{$data[$i]->staff_program}}</td>
+                        <td>{{$data[$i]->staff_phone}}</td>
+                        <td>{{$data[$i]->staff_line}}</td>
+                        <td>
+                            <ol style="padding-left: 0">
+                                <li>{{$data[$i]->choice_1}}</li>
+                                <li>{{$data[$i]->choice_2}}</li>
+                                <li>{{$data[$i]->choice_3}}</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ul style="padding-left: 0">
+                                <li>{{$time[$i][0]}}</li>
+                                <li>{{$time[$i][1]}}</li>
+                                <li>{{$time[$i][2]}}</li>
+                                <li>{{$time[$i][3]}}</li>
+                                <li>{{$time[$i][4]}}</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </td>
+                    </form>
+                </tr>
+            @endfor
             </tbody>
         </table>
 
