@@ -2,23 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('commingsoon');
-});
+Route::group(['middleware' =>['checkStaffRegis']], function(){
+    Route::get('/', function () {
+        return view('commingsoon');
+    });
 
-Route::get('/Home', 'HomeController@index');
+    Route::get('/Home', 'HomeController@index');
 
-Route::get('/FAQ', function () {
-    return view('FAQ');
-});
-Route::get('/StaffRegistrationForm', function () {
-    return view('staffregis');
-});
-Route::get('/CompetitionRegistration', function () {
-    return view('competitionregis');
-});
-Route::get('/UploadAnswer', function () {
-    return view('uploadanswer');
+    Route::get('/FAQ', function () {
+        return view('FAQ');
+    });
+    Route::get('/StaffRegistrationForm', function () {
+        return view('staffregis');
+    });
+    Route::get('/CompetitionRegistration', function () {
+        return view('competitionregis');
+    });
+    Route::get('/UploadAnswer', function () {
+        return view('uploadanswer');
+    });
 });
 
 //admin site
@@ -28,7 +30,7 @@ Route::get('/LoginAdminKompek', function () {
 
 Route::post('LoginAdminKompek', 'AdminController@find')->middleware('web');
 
-Route::group(['middleware' => ['web', 'adminAuth']], function (){
+Route::group(['middleware' => ['web', 'adminAuth', 'checkStaffRegis']], function (){
 
     Route::resource('/AdminKompekPage/Participant', "ParticipantController");
     Route::get('/AdminKompekPage/ParticipantList/{id}', "ParticipantController@showByCompetition");
@@ -46,6 +48,8 @@ Route::group(['middleware' => ['web', 'adminAuth']], function (){
     Route::get('/AdminKompekPage/Staff', function () {
         return view('adminstaff');
     });
+
+    Route::get('/AdminKompekPage/StaffRegisStatus', 'StatusController@changeStatus');
 
     Route::get('/AdminKompekPage/LogOut', 'AdminController@logOut');
     

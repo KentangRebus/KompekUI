@@ -70,16 +70,39 @@
                             <i class="nav-icon cui-share "></i> Announcement
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/AdminKompekPage/Staff">
-                            <i class="nav-icon cui-user "></i> Staff
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon cui-puzzle"></i> Staff
                         </a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/AdminKompekPage/Staff">
+                                    <i class="nav-icon cui-user "></i>Manage Staff
+                                </a>
+                            </li>
+                            @if(\Illuminate\Support\Facades\Session::get('status') == 1)
+                            <li class="nav-item" style="background-color: mediumseagreen">
+                                <a class="nav-link" href="/AdminKompekPage/StaffRegisStatus">
+                                    <i class="nav-icon cui-account-logout"></i> Register Staff Open
+                                </a>
+                            </li>
+                            @endif
+                            @if(\Illuminate\Support\Facades\Session::get('status') == 0)
+                            <li class="nav-item" style="background-color: red">
+                                <a class="nav-link" href="/AdminKompekPage/StaffRegisStatus" methods="post">
+                                    <i class="nav-icon cui-account-logout"></i> Register Staff Close
+                                </a>
+                            </li>
+                            @endif
+                        </ul>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/AdminKompekPage/LogOut">
                             <i class="nav-icon cui-account-logout"></i> Log Out
                         </a>
                     </li>
+
                 </ul>
             </nav>
             <button class="sidebar-minimizer brand-minimizer" type="button"></button>

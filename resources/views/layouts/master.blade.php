@@ -33,7 +33,9 @@
                     <a href="">Registration</a>
                     <div class="dropdown-content">
                         <a href="/CompetitionRegistration">Competition Registration</a>
+                        @if(\Illuminate\Support\Facades\Session::get('status') == 1)
                         <a href="/StaffRegistrationForm">Staff Registration</a>
+                        @endif
                     </div>
                 </li>
                 <li onclick="redirectTo('/UploadAnswer')"><a href="/UploadAnswer">Upload</a></li>

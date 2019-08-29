@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/staff_registration.css')}}">
 @stop
 
+@section('more_script')
+    @if(\Illuminate\Support\Facades\Session::get('status') == 0)
+        <script>
+            window.location = '/Home'
+        </script>
+    @endif
+@stop
+
 @section('content')
     <div>
     <div id="content" class="pt-5 pb-5 pl-3">
