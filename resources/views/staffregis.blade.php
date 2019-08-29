@@ -20,11 +20,11 @@
                     <tbody>
                     <tr>
                         <td class="color-black lbl"> Name</td>
-                        <td><input type="text" name="staff_name" id="name_txt" class="input-field"></td>
+                        <td><input type="text" name="staff_name" id="name_txt" class="input-field" required></td>
                     </tr>
                     <tr>
                         <td class="color-black lbl"> Student ID</td>
-                        <td><input type="text" name="staff_id" id="id_txt" class="input-field"></td>
+                        <td><input type="text" name="staff_id" id="id_txt" class="input-field" required></td>
                     </tr>
                     <tr>
                         <td class="color-black lbl"> Program</td>
@@ -40,28 +40,28 @@
                     </tr>
                     <tr>
                         <td class="color-black lbl p-r-20"> Phone</td>
-                        <td><input type="text" name="phone" id="contact_txt" class="input-field"></td>
+                        <td><input type="text" name="phone" id="contact_txt" class="input-field" required></td>
                     </tr>
                     <tr>
                         <td class="color-black lbl p-r-20"> LINE </td>
-                        <td><input type="text" name="line" id="contact_txt" class="input-field"></td>
+                        <td><input type="text" name="line" id="contact_txt" class="input-field" required></td>
                     </tr>
                     <tr>
                         <td class="color-black lbl p-r-20"> 1st Choice</td>
                         <td>
                             <select id="1_choice_option" class="option-field" name="choiceOne">
-                                <option value="event"> Event</option>
-                                <option value="officer"> Liaison Officer</option>
-                                <option value="eco_research"> Economic Research Paper</option>
-                                <option value="business"> Business Case</option>
-                                <option value="eco_quiz"> Economic Quiz</option>
-                                <option value="eco_debate"> Economic Debate Competition</option>
-                                <option value="log"> Logistics</option>
-                                <option value="transport"> Transportation and Acommodation</option>
-                                <option value="sponsor"> Sponsorship</option>
-                                <option value="food"> Food, Beverage, and Bazaar</option>
-                                <option value="creative"> Creative Design and Marketing</option>
-                                <option value="communication"> Communication and General Affairs</option>
+                                <option value="Event"> Event</option>
+                                <option value="Liaison Officer"> Liaison Officer</option>
+                                <option value="Economic Research Paper"> Economic Research Paper</option>
+                                <option value="Business Case"> Business Case</option>
+                                <option value="Economic Quiz"> Economic Quiz</option>
+                                <option value="Economic Debate Competition"> Economic Debate Competition</option>
+                                <option value="Logistics"> Logistics</option>
+                                <option value="Transportation and Acommodation"> Transportation and Acommodation</option>
+                                <option value="Sponsorship"> Sponsorship</option>
+                                <option value="Food, Beverage, and Bazaar"> Food, Beverage, and Bazaar</option>
+                                <option value="Creative Design and Marketing"> Creative Design and Marketing</option>
+                                <option value="Communication and General Affairs"> Communication and General Affairs</option>
                             </select>
                         </td>
                     </tr>

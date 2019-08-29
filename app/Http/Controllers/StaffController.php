@@ -14,7 +14,13 @@ class StaffController extends Controller
      */
     public function index()
     {
-        //
+        $data = Staff::all();
+
+        foreach ($data as $d){
+            $time[] = explode(',',$d->time_available,5);
+        }
+
+        return view('adminstaff')->with("data", $data)->with("time", $time);
     }
 
     /**
@@ -78,8 +84,10 @@ class StaffController extends Controller
      * @param  \App\Staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Staff $staff)
+    public function destroy($id)
     {
-        //
+        Staff::destroy($id);
+
+        return redirect('AdminKompekPage/Staff');
     }
 }
