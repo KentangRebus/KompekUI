@@ -49,7 +49,22 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Participant();
+        $data->participant_school = $request->school;
+        $data->participant_teacher = $request->teacher;
+        $data->participant_1 = $request->head;
+        $data->participant_1_email = $request->email;
+        $data->participant_2 = $request->participant_2;
+        $data->participant_3 = $request->participant_3;
+        $data->participant_phone = $request->phone;
+        $data->save();
+
+        $detail = new RegistrationDetail();
+        $detail->participant_id = $data->participant_id;
+        $detail->competition_id = $request->competition;
+        $detail->save();
+
+        return redirect('Home');
     }
 
     /**
@@ -92,8 +107,10 @@ class ParticipantController extends Controller
      * @param  \App\Participant  $participant
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Participant $participant)
+    public function destroy($id)
     {
-        //
+        Participant::destroy($id);
+
+        return redirect('AdminKompekPage/Participant');
     }
 }

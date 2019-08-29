@@ -19,17 +19,19 @@
             <tbody>
             @for($i = 0; $i < count($data); $i++)
                 <tr>
-                    <th scope="row">{{$i+1}}</th>
-                    <td>{{$data[$i]->participant_school}}</td>
-                    <td>{{$data[$i]->participant_1}}</td>
-                    <td>{{$data[$i]->participant_1_email}}</td>
-                    <td>{{$data[$i]->participant_phone}}</td>
-                    @foreach($data[$i]->competitions as $competition)
-                        <td>{{$competition->competition_name}}</td>
-                    @endforeach
-                    <td>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </td>
+                    <form method="get" action="{{url("/AdminKompekPage/ParticipantDelete/".$data[$i]->participant_id)}}">
+                        <th scope="row">{{$i+1}}</th>
+                        <td>{{$data[$i]->participant_school}}</td>
+                        <td>{{$data[$i]->participant_1}}</td>
+                        <td>{{$data[$i]->participant_1_email}}</td>
+                        <td>{{$data[$i]->participant_phone}}</td>
+                        @foreach($data[$i]->competitions as $competition)
+                            <td>{{$competition->competition_name}}</td>
+                        @endforeach
+                        <td>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </td>
+                    </form>
                 </tr>
             @endfor
 

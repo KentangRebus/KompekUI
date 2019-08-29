@@ -12,7 +12,7 @@
                 <span class="color-black fw-bold"> &nbsp Competition Registration </span>
             </div>
 
-        <form action="">
+        <form action="{{url('/AdminKompekPage/Participant')}}" method="post">
             @csrf
             <div id="mid-content" class="dis-flex">
                 <div class="w-50">
@@ -20,11 +20,11 @@
                         <tbody>
                         <tr>
                             <td class="color-black lbl td-w-250"> School</td>
-                            <td><input type="text" name="" id="school_txt" class="input-field"></td>
+                            <td><input type="text" name="school" id="school_txt" class="input-field" required></td>
                         </tr>
                         <tr>
                             <td rowspan="2" class="color-black lbl"> Accompanying <br> Teacher</td>
-                            <td rowspan="2"><input type="text" name="" id="teacher_txt" class="input-field"></td>
+                            <td rowspan="2"><input type="text" name="teacher" id="teacher_txt" class="input-field" required></td>
                         </tr>
                         <tr>
                         </tr>
@@ -34,22 +34,22 @@
                         </tr>
                         <tr>
                             <td class="color-black lbl "> Name</td>
-                            <td><input type="text" name="" id="name_txt" class="input-field"></td>
+                            <td><input type="text" name="head" id="name_txt" class="input-field" required></td>
                         </tr>
                         <tr>
                             <td class="color-black lbl "> Email</td>
-                            <td><input type="email" name="" id="email_txt" class="input-field"></td>
+                            <td><input type="email" name="email" id="email_txt" class="input-field" required></td>
                         </tr>
                         <tr>
                             <td colspan="2" class="heading"><span class="color-black"> &nbsp Delegations </span></td>
                         </tr>
                         <tr>
                             <td class="color-black lbl "> Delegate 2</td>
-                            <td><input type="text" name="" id="delegate2_txt" class="input-field"></td>
+                            <td><input type="text" name="participant_2" id="delegate2_txt" class="input-field" required></td>
                         </tr>
                         <tr>
                             <td class="color-black lbl "> Delegate 3</td>
-                            <td><input type="text" name="" id="delegate3_txt" class="input-field"></td>
+                            <td><input type="text" name="participant_3" id="delegate3_txt" class="input-field" required></td>
                         </tr>
                         </tbody>
                     </table>
@@ -59,7 +59,15 @@
                         <tbody>
                         <tr>
                             <td class="color-black lbl td-w-250 pad"> Competition </td>
-                            <td><input type="text" name="" id="competition_txt" class="input-field"></td>
+                            <td>
+                                <select id="competition_option" class="option-field" name="competition"
+                                    style="">
+                                    <option value = "1"> EQ </option>
+                                    <option value = "2"> EDC </option>
+                                    <option value = "3"> BC </option>
+                                    <option value = "4"> ERP </option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td colspan="2">
@@ -70,7 +78,7 @@
                         </tr>
                         <tr>
                             <td class="color-black lbl pad"> Telephone</td>
-                            <td><input type="text" name="" id="telephone_txt" class="input-field"></td>
+                            <td><input type="text" name="phone" id="telephone_txt" class="input-field" required></td>
                         </tr>
                         <tr>
                             <td colspan="2" class="heading"><span class="color-black"> &nbsp Administration </span></td>
@@ -88,7 +96,7 @@
                 </div>
             </div>
             <div class="dis-flex flex-c flex-m">
-                <button id="register_btn" class=""> Submit</button>
+                <button type="submit" id="register_btn" class=""> Submit</button>
             </div>
         </form>
 
