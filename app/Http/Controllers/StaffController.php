@@ -41,7 +41,30 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Staff();
+        $data->staff_name = $request->staff_name;
+        $data->staff_student_id = $request->staff_student_id;
+        $data->staff_program = $request->program;
+        $data->staff_phone= $request->phone;
+        $data->staff_line= $request->line;
+        $data->choice_1 = $request->choiceOne;
+        $data->choice_2 = $request->choiceTwo;
+        $data->choice_3 = $request->choiceThree;
+        $available_time = $request->time;
+        $time = $available_time[0];
+
+        if(count($available_time) < 5){
+           return view('staffregis')->with("message","Please select minimal 5 time");
+        }
+
+        for($i = 1; $i < count($available_time); $i++){
+            $time = $time.','.$available_time[$i];
+        }
+
+        $data->time_available = $time;
+        $data->save();
+
+        return redirect('Home')->with("successMessage", "Success Register");
     }
 
     /**
