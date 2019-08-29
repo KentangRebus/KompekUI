@@ -20,16 +20,16 @@
                     <tbody>
                     <tr>
                         <td class="color-black lbl"> Name</td>
-                        <td><input type="text" name="" id="name_txt" class="input-field"></td>
+                        <td><input type="text" name="staff_name" id="name_txt" class="input-field"></td>
                     </tr>
                     <tr>
                         <td class="color-black lbl"> Student ID</td>
-                        <td><input type="text" name="" id="id_txt" class="input-field"></td>
+                        <td><input type="text" name="staff_id" id="id_txt" class="input-field"></td>
                     </tr>
                     <tr>
                         <td class="color-black lbl"> Program</td>
                         <td>
-                            <select id="program_option" class="option-field">
+                            <select id="program_option" class="option-field" name="program">
                                 <option value="acc"> Accounting</option>
                                 <option value="eco"> Economics</option>
                                 <option value="man"> Management</option>
@@ -39,13 +39,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="color-black lbl p-r-20"> LINE / Phone</td>
-                        <td><input type="text" name="" id="contact_txt" class="input-field"></td>
+                        <td class="color-black lbl p-r-20"> Phone</td>
+                        <td><input type="text" name="phone" id="contact_txt" class="input-field"></td>
+                    </tr>
+                    <tr>
+                        <td class="color-black lbl p-r-20"> LINE </td>
+                        <td><input type="text" name="line" id="contact_txt" class="input-field"></td>
                     </tr>
                     <tr>
                         <td class="color-black lbl p-r-20"> 1st Choice</td>
                         <td>
-                            <select id="1_choice_option" class="option-field">
+                            <select id="1_choice_option" class="option-field" name="choiceOne">
                                 <option value="event"> Event</option>
                                 <option value="officer"> Liaison Officer</option>
                                 <option value="eco_research"> Economic Research Paper</option>
@@ -64,7 +68,7 @@
                     <tr>
                         <td class="color-black lbl p-r-20"> 2nd Choice</td>
                         <td>
-                            <select id="2_choice_option" class="option-field">
+                            <select id="2_choice_option" class="option-field" name="choiceTwo">
                                 <option value="event"> Event</option>
                                 <option value="officer"> Liaison Officer</option>
                                 <option value="eco_research"> Economic Research Paper</option>
@@ -83,7 +87,7 @@
                     <tr>
                         <td class="color-black lbl pad p-r-20"> 3rd Choice</td>
                         <td>
-                            <select id="3_choice_option" class="option-field">
+                            <select id="3_choice_option" class="option-field" name="choiceThree">
                                 <option value="event"> Event</option>
                                 <option value="officer"> Liaison Officer</option>
                                 <option value="eco_research"> Economic Research Paper</option>
