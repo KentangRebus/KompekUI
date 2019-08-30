@@ -11,14 +11,15 @@
                 </form>
             </div>
             <div style="margin-left: auto">
-                <form action="" class="form-inline">
+                <form action="/AdminKompekPage/ParticipantList" method="get" class="form-inline">
                     <select id="competition_option" class="form-control mb-2 mr-3" name="competition">
+                        <option value = "0"> All </option>
                         <option value = "1"> EQ </option>
                         <option value = "2"> EDC </option>
                         <option value = "3"> BC </option>
                         <option value = "4"> ERP </option>
                     </select>
-                    <button type="submit" class="btn btn-primary mb-2">Filter</button>
+                    <button type="submit" class="btn btn-primary mb-2" onclick="setOption()">Filter</button>
                 </form>
             </div>
         </div>
@@ -31,6 +32,7 @@
                 <th scope="col">Head Email</th>
                 <th scope="col">Telephone</th>
                 <th scope="col">Competition</th>
+                <th scope="col">Payment</th>
                 <th scope="col">Action</th>
             </tr>
             </thead>
@@ -47,7 +49,7 @@
                             <td>{{$competition->competition_name}}</td>
                         @endforeach
                         <td>
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" onclick="asd()" class="btn btn-danger">Delete</button>
                         </td>
                     </form>
                 </tr>
@@ -55,6 +57,18 @@
 
             </tbody>
         </table>
-
     </div>
+    <script>
+
+        @if(isset($_GET["competition"]))
+            $value = {{$_GET["competition"]}};
+        @else
+            $value = 0;
+        @endif
+
+        var val = $value;
+        document.getElementById("competition_option").value = val;
+
+    </script>
+
 @stop

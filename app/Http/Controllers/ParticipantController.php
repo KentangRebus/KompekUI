@@ -21,15 +21,22 @@ class ParticipantController extends Controller
         return view('adminparticipant')->with("data", $data);
     }
 
-    public function showByCompetition($id){
-        $value = $id;
-        $data = Participant::with('competitions')
-                ->whereHas('competitions', function ($query) use ($value){
+    public function showByCompetition(Request $request)
+    {
+        $value = $request->competition;
+
+        if ($value == 0) {
+            $data = Participant::all();
+        } else {
+            $data = Participant::with('competitions')
+                ->whereHas('competitions', function ($query) use ($value) {
                     $query->where('competition.competition_id', $value);
                 })
                 ->get();
+        }
 
         return view('adminparticipant')->with("data", $data);
+
     }
 
     /**
@@ -45,7 +52,7 @@ class ParticipantController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -73,21 +80,19 @@ class ParticipantController extends Controller
         $folderName = $request->school . $request->head;
 
         $paymentFile = $request->file('payment_file');
-        $paymentFile->storeAs('/participant/'.$folderName, 'PaymentFile.pdf');
+        $paymentFile->storeAs('/participant/' . $folderName, 'PaymentFile.pdf');
 
         $regisFile = $request->file('regis_file');
-        $regisFile->storeAs('/participant/'.$folderName, 'RegisterForm.pdf');
+        $regisFile->storeAs('/participant/' . $folderName, 'RegisterForm.pdf');
 
-        try{
-            Mail::send('email', ["msg"=>""],function ($msg) use ($request)
-            {
+        try {
+            Mail::send('email', ["msg" => ""], function ($msg) use ($request) {
                 $msg->subject("Kompek FEB UI Register Success");
                 $msg->from('public.relation@kompek-febui.com', 'Kompek FEB UI Staff');
                 $msg->to($request->email);
             });
 //             return redirect('Home')->with('alert-success','Email Sent');
-        }
-        catch (Exception $e){
+        } catch (Exception $e) {
             // return response (['status' => false,'errors' => $e->getMessage()]);
         }
 
@@ -101,7 +106,7 @@ class ParticipantController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Participant  $participant
+     * @param  \App\Participant $participant
      * @return \Illuminate\Http\Response
      */
     public function show(Participant $participant)
@@ -112,7 +117,7 @@ class ParticipantController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Participant  $participant
+     * @param  \App\Participant $participant
      * @return \Illuminate\Http\Response
      */
     public function edit(Participant $participant)
@@ -123,8 +128,8 @@ class ParticipantController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Participant  $participant
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Participant $participant
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Participant $participant)
@@ -135,7 +140,7 @@ class ParticipantController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Participant  $participant
+     * @param  \App\Participant $participant
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

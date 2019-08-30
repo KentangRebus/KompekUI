@@ -38,7 +38,7 @@ Route::post('LoginAdminKompek', 'AdminController@find')->middleware('web');
 Route::group(['middleware' => ['web', 'adminAuth', 'checkStaffRegis']], function (){
 
     Route::resource('/AdminKompekPage/Participant', "ParticipantController");
-    Route::get('/AdminKompekPage/ParticipantList/{id}', "ParticipantController@showByCompetition");
+    Route::get('/AdminKompekPage/ParticipantList', "ParticipantController@showByCompetition");
     Route::get('/AdminKompekPage/ParticipantDelete/{id}',"ParticipantController@destroy");
 
     Route::resource('/AdminKompekPage/Case', 'CasefileController');
