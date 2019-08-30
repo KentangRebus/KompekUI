@@ -25,7 +25,7 @@ Route::group(['middleware' =>['checkStaffRegis']], function(){
         return view('uploadanswer');
     });
     Route::get('/Form/Download', 'DownloadController@dlRegistrationForm');
-    Route::get('/Case/{$case}', 'DownloadController@dlParticipantCase');
+    Route::get('/Case/{case}', 'DownloadController@dlParticipantCase');
 });
 
 //admin site

@@ -23,9 +23,8 @@ class DownloadController extends Controller
     }
 
     function dlParticipantCase($case){
-
-        $data = DB::table('casefile')->where('competition', $case);
-        $path = $data->path;
+        $data = DB::table('casefile')->where('competition', $case)->first();
+        $path = '../storage/app'.$data->path;
 
         return response()->download($path);
     }
