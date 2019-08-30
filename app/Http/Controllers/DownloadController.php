@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Chumper\Zipper\Zipper;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class DownloadController extends Controller
@@ -19,6 +20,14 @@ class DownloadController extends Controller
         $zipper->make($dst)->add('../storage/app/participant')->close();
 
         return response()->download($dst);
+    }
+
+    function dlParticipantCase($case){
+
+        $data = DB::table('casefile')->where('competition', $case);
+        $path = $data->path;
+
+        return response()->download($path);
     }
 
 }
