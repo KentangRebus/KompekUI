@@ -4,6 +4,18 @@
     <div class="p-4">
         <h1 class="text-center mb-5">Manage Participant</h1>
 
+        <div>
+            <form action="" class="form-inline">
+                <select id="competition_option" class="form-control mb-2 mr-3" name="competition" style="margin-left: auto">
+                    <option value = "1"> EQ </option>
+                    <option value = "2"> EDC </option>
+                    <option value = "3"> BC </option>
+                    <option value = "4"> ERP </option>
+                </select>
+
+                <button type="submit" class="btn btn-primary mb-2">Filter</button>
+            </form>
+        </div>
         <table class="table table-hover">
             <thead class="thead-light">
             <tr>

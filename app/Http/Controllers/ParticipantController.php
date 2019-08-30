@@ -72,10 +72,10 @@ class ParticipantController extends Controller
         $folderName = $request->school . $request->head;
 
         $paymentFile = $request->file('payment_file');
-        $paymentFile->storeAs('/participant/'.$folderName, 'PaymentFile'.$paymentFile->getExtension());
+        $paymentFile->storeAs('/participant/'.$folderName, 'PaymentFile.pdf');
 
         $regisFile = $request->file('regis_file');
-        $regisFile->storeAs('/participant/'.$folderName, 'RegisterForm'.$regisFile->getExtension());
+        $regisFile->storeAs('/participant/'.$folderName, 'RegisterForm.pdf');
 
         try{
             Mail::send('email', ["msg"=>""],function ($msg) use ($request)
