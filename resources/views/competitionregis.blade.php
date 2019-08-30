@@ -72,7 +72,7 @@
                         <tr>
                             <td colspan="2">
                         <span class="color-light-red"> Choose your competition. Please download the following
-                            <a class="color-light-red fw-bold decor-u" href=""> Registration Form </a>
+                            <a class="color-light-red fw-bold decor-u" href="/Form/Download"> Registration Form </a>
                         </span>
                             </td>
                         </tr>

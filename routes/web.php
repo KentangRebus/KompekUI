@@ -21,6 +21,7 @@ Route::group(['middleware' =>['checkStaffRegis']], function(){
     Route::get('/UploadAnswer', function () {
         return view('uploadanswer');
     });
+    Route::get('/Form/Download', 'DownloadController@dlRegistrationForm');
 });
 
 //admin site
