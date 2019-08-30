@@ -161,6 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         jpmurray\LaravelCountdown\CountdownServiceProvider::class,
+        Chumper\Zipper\ZipperServiceProvider::class
 
     ],
 
@@ -212,6 +213,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Countdown' => jpmurray\LaravelCountdown\Facades\CountdownFacade::class,
+        'Zipper' => Chumper\Zipper\Zipper::class,
 
     ],
 

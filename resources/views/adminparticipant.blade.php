@@ -6,8 +6,8 @@
 
         <div class="form-inline">
             <div>
-                <form action="">
-                    <button type="submit" class="btn btn-outline-success mb-2">Participant File</button>
+                <form action="/AdminKompekPage/Download/Participant">
+                    <button type="submit" class="btn btn-outline-success mb-2">Download Participant File</button>
                 </form>
             </div>
             <div style="margin-left: auto">

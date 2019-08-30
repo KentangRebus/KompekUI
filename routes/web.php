@@ -55,6 +55,7 @@ Route::group(['middleware' => ['web', 'adminAuth', 'checkStaffRegis']], function
     Route::get('/AdminKompekPage/StaffRegisStatus', 'StatusController@changeStatus');
 
     Route::get('/AdminKompekPage/LogOut', 'AdminController@logOut');
+    Route::get('/AdminKompekPage/Download/Participant', 'DownloadController@dlParticipantFile');
 });
 
 
