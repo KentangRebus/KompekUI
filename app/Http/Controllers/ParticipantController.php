@@ -84,13 +84,13 @@ class ParticipantController extends Controller
                 $msg->from('public.relation@kompek-febui.com', 'Kompek FEB UI Staff');
                 $msg->to($request->email);
             });
-            // return redirect('Home')->with('alert-success','Email Sent');
+//             return redirect('Home')->with('alert-success','Email Sent');
         }
         catch (Exception $e){
             // return response (['status' => false,'errors' => $e->getMessage()]);
         }
 
-        return redirect('Home');
+        return redirect('/Home');
     }
 
     /**

@@ -12,7 +12,7 @@
                 <span class="color-black fw-bold"> &nbsp Competition Registration </span>
             </div>
 
-        <form action="{{url('/Participant')}}" method="post">
+        <form action="/Participant" method="post" enctype="multipart/form-data">
             @csrf
             <div id="mid-content" class="dis-flex">
                 <div class="w-50">

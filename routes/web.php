@@ -15,10 +15,12 @@ Route::group(['middleware' =>['checkStaffRegis']], function(){
     Route::get('/StaffRegistrationForm', function () {
         return view('staffregis');
     });
+
     Route::get('/CompetitionRegistration', function () {
         return view('competitionregis');
     });
     Route::post('/Participant', "ParticipantController@store");
+
     Route::get('/UploadAnswer', function () {
         return view('uploadanswer');
     });
