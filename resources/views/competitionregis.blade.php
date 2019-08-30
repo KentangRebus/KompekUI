@@ -12,7 +12,7 @@
                 <span class="color-black fw-bold"> &nbsp Competition Registration </span>
             </div>
 
-        <form action="{{url('/AdminKompekPage/Participant')}}" method="post">
+        <form action="{{url('/Participant')}}" method="post">
             @csrf
             <div id="mid-content" class="dis-flex">
                 <div class="w-50">

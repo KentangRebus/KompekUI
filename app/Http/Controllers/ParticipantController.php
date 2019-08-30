@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use App\Participant;
 use App\RegistrationDetail;
 use Illuminate\Http\Request;
@@ -64,7 +65,18 @@ class ParticipantController extends Controller
         $detail->competition_id = $request->competition;
         $detail->save();
 
-        return redirect('Home');
+        try{
+            Mail::send('email', ["msg"=>""],function ($msg) use ($request)
+            {
+                $msg->subject("Kompek FEB UI Register Success");
+                $msg->from('public.relation@kompek-febui.com', 'Kompek FEB UI Staff');
+                $msg->to($request->email);
+            });
+            return redirect('Home')->with('alert-success','Email Sent');
+        }
+        catch (Exception $e){
+            return response (['status' => false,'errors' => $e->getMessage()]);
+        }
     }
 
     /**

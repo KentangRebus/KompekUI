@@ -18,6 +18,7 @@ Route::group(['middleware' =>['checkStaffRegis']], function(){
     Route::get('/CompetitionRegistration', function () {
         return view('competitionregis');
     });
+    Route::post('/Participant', "ParticipantController@store");
     Route::get('/UploadAnswer', function () {
         return view('uploadanswer');
     });
@@ -52,7 +53,6 @@ Route::group(['middleware' => ['web', 'adminAuth', 'checkStaffRegis']], function
     Route::get('/AdminKompekPage/StaffRegisStatus', 'StatusController@changeStatus');
 
     Route::get('/AdminKompekPage/LogOut', 'AdminController@logOut');
-    
 });
 
 
