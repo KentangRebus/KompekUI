@@ -85,11 +85,18 @@
                         </tr>
                         <tr>
                             <td class="color-black lbl pad"> Proof of Payment</td>
-                            <td><input class="upload-btn" type="file" name="" id="upload_payment_btn"></td>
+                            <td>
+                                <input class="upload-btn" type="file" name="payment_file" id="upload_payment_btn">
+                                <small>File must be .pdf format and less then 200MB</small>
+                            </td>
                         </tr>
                         <tr>
                             <td class="color-black lbl pad"> Registration Form</td>
-                            <td><input class=" upload-btn" type="file" name="" id="upload_form_btn"></td>
+                            <td>
+                                <input class=" upload-btn" type="file" name="regis_file" id="upload_form_btn">
+                                <small>File must be .pdf format and less then 200MB</small>
+                            </td>
+
                         </tr>
                         </tbody>
                     </table>

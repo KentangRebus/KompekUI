@@ -49,6 +49,11 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'payment_file' => 'required|mimes:pdf|max:300000',
+            'regis_file' => 'required|mimes:pdf|max:300000',
+        ]);
+
         $data = new Participant();
         $data->participant_school = $request->school;
         $data->participant_teacher = $request->teacher;
@@ -63,6 +68,15 @@ class ParticipantController extends Controller
         $detail->participant_id = $data->participant_id;
         $detail->competition_id = $request->competition;
         $detail->save();
+
+        $folderName = $request->school . $request->head;
+
+        $paymentFile = $request->file('payment_file');
+        $paymentFile->storeAs('/participant/'.$folderName, 'PaymentFile'.$paymentFile->getExtension());
+
+        $regisFile = $request->file('regis_file');
+        $regisFile->storeAs('/participant/'.$folderName, 'RegisterForm'.$regisFile->getExtension());
+
 
         return redirect('Home');
     }
