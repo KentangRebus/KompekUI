@@ -13,16 +13,12 @@ class DownloadController extends Controller
     }
 
     function dlParticipantFile(){
-        $src = '../storage/app/';
-        $dst = 'participantFile.zip';
+        $dst = 'storage/app/participantFile.zip';
 
-//        $zipper = new Zipper();
-//        $zipper->make($dst)->folder($src)->add($src);
-//        $zipper->close();
-        $zip = new Zipper();
-        $zip->make($dst)->folder('participant')->add($src)->close();
+        $zipper = new Zipper();
+        $zipper->make($dst)->add('../storage/app/participant')->close();
 
-        return Storage::download($dst);
+        return response()->download($dst);
     }
 
 }
