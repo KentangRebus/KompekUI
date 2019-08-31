@@ -76,6 +76,7 @@ class ParticipantController extends Controller
         $detail->participant_id = $data->participant_id;
         $detail->competition_id = $request->competition;
         $detail->save();
+
         $folderName = $request->school . $request->head;
 
         $paymentFile = $request->file('payment_file');
@@ -95,7 +96,11 @@ class ParticipantController extends Controller
             // return response (['status' => false,'errors' => $e->getMessage()]);
         }
 
-        return redirect('/Home');
+        $comp = ['EQ', 'EDC', 'BC', 'ERP'];
+        $case = $comp[$request->competition - 1];
+        return redirect("/Case/$case");
+
+//        return redirect('/Home');
     }
 
     public function uploadCompetition(Request $request)

@@ -27,6 +27,7 @@ Route::group(['middleware' =>['checkStaffRegis']], function(){
     Route::post('/Answer', "ParticipantController@uploadCompetition");
 
     Route::get('/Form/Download', 'DownloadController@dlRegistrationForm');
+    Route::get('/Case/{case}', 'DownloadController@dlParticipantCase');
 });
 
 //admin site
