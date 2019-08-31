@@ -113,6 +113,10 @@ class ParticipantController extends Controller
 
         if ($participant->exists()) {
             $id = $participant->first()->participant_id;
+            $curr_participant = Participant::find($id);
+
+            $curr_participant->competition_file = "true";
+            $curr_participant->credential_file = "true";
             $curr_participant->save();
 
             $competition_file = $request->file('competition_file');
