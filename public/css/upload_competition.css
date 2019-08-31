@@ -28,9 +28,9 @@
     padding-bottom: 80px;
 }
 
-.option-field {
+.option-field{
     outline: none;
-    width: 300px;
+    width: 250px;
     height: 26px;
 }
 
@@ -73,6 +73,11 @@
     }
 
     .input-field{
+        width: 190px;
+        margin-left: 10px;
+    }
+
+    .option-field{
         width: 190px;
         margin-left: 10px;
     }

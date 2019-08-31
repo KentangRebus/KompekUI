@@ -98,6 +98,35 @@ class ParticipantController extends Controller
         return redirect('/Home');
     }
 
+    public function uploadCompetition(Request $request)
+    {
+        $request->validate([
+            'credential_letter' => 'required|mimes:zip,rar|max:300000',
+            'competition_file' => 'required|mimes:zip,rar|max:300000',
+        ]);
+
+        $folderName = $request->school . $request->head;
+
+        $participant = Participant::where('participant_school', '=', $request->school)
+            ->where('participant_1', '=', $request->head)
+            ->where('participant_1_email', '=', $request->email);
+
+        if ($participant->exists()) {
+            $id = $participant->first()->participant_id;
+            $curr_participant->save();
+
+            $competition_file = $request->file('competition_file');
+            $competition_file->storeAs('/answer/' . $folderName, 'competition_file.zip');
+
+            $credentialLetter = $request->file('credential_letter');
+            $credentialLetter->storeAs('/answer/' . $folderName, 'credential_letter.zip');
+
+            return redirect('/Home');
+        }
+
+        return redirect('UploadAnswer');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -127,9 +156,9 @@ class ParticipantController extends Controller
      * @param  \App\Participant $participant
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Participant $participant)
+    public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

@@ -15,7 +15,7 @@
             <div class="heading">
                 <span id="identifier" class="color-black fw-bold"> Requirements </span>
             </div>
-            <form action="">
+            <form action="/Answer" method="post" enctype="multipart/form-data">
                 @csrf
             <div id="mid-content" class="dis-flex">
                 <div class="w-50">
@@ -23,11 +23,11 @@
                         <tbody>
                         <tr>
                             <td class="color-black lbl td-w-250 pad"> School</td>
-                            <td><input type="text" name="" id="school_txt" class="input-field"></td>
+                            <td><input type="text" name="school" id="school_txt" class="input-field"></td>
                         </tr>
                         <tr>
                             <td class="color-black lbl pad"> Head of Delegation</td>
-                            <td><input type="text" name="" id="delegation_head_txt" class="input-field"></td>
+                            <td><input type="text" name="head" id="delegation_head_txt" class="input-field"></td>
                         </tr>
                         </tbody>
                     </table>
@@ -36,12 +36,20 @@
                     <table style="margin: 10px 0 10px 20px; border-spacing: 0 15px; border-collapse: separate">
                         <tbody>
                         <tr>
-                            <td class="color-black lbl td-w-250"> Competition</td>
-                            <td><input type="text" name="" id="competition_txt" class="input-field"></td>
+                            <td class="color-black lbl td-w-250 pad"> Competition </td>
+                            <td>
+                                <select id="competition_option" class="option-field" name="competition"
+                                        style="">
+                                    <option value = "1"> EQ </option>
+                                    <option value = "2"> EDC </option>
+                                    <option value = "3"> BC </option>
+                                    <option value = "4"> ERP </option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td class="color-black lbl"> Email</td>
-                            <td><input type="email" name="" id="email_txt" class="input-field"></td>
+                            <td><input type="email" name="email" id="email_txt" class="input-field"></td>
                         </tr>
                         </tbody>
                     </table>
@@ -58,7 +66,11 @@
                         <tbody>
                         <tr>
                             <td class="color-black td-w-250 lbl"> Competition File</td>
-                            <td><input class="upload-btn" type="file" name="" id="competition_upload_btn"></td>
+                            <td><input class="upload-btn" type="file" name="competition_file" id="competition_upload_btn"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><small>File must be .zip format and less then 200MB</small></td>
                         </tr>
                         </tbody>
                     </table>
@@ -68,7 +80,12 @@
                         <tbody>
                         <tr>
                             <td class="color-black td-w-250 lbl pad-6"> Letter of Credentials</td>
-                            <td><input class="upload-btn" type="file" name="" id="letter_upload_btn"></td>
+                            <td><input class="upload-btn" type="file" name="credential_letter" id="letter_upload_btn"></td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><small>File must be .zip format and less then 200MB</small></td>
                         </tr>
                         </tbody>
                     </table>
