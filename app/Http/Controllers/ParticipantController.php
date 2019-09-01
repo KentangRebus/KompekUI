@@ -73,7 +73,7 @@ class ParticipantController extends Controller
         $data->participant_3 = $request->participant_3;
         $data->participant_phone = $request->phone;
         $data->payment_proof = "true";
-        $data->registration_form = true;
+        $data->registration_form = "true";
         $data->save();
 
         $detail = new RegistrationDetail();
@@ -138,6 +138,26 @@ class ParticipantController extends Controller
         }
 
         return redirect('UploadAnswer');
+    }
+
+    public function showAnswers(){
+
+        $data = Participant::where("competition_file", "true")
+                            ->where("credential_file", "true")
+                            ->with("competitions")
+                            ->get();
+
+        return view('adminanswer')->with("data", $data);
+    }
+
+    public function deleteAnswer($id){
+
+        $participant = Participant::find($id);
+        $participant->competition_file = "false";
+        $participant->credential_file = "false";
+        $participant->save();
+
+        return redirect('AdminKompekPage/Answer');
     }
 
     /**

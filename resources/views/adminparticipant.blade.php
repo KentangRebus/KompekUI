@@ -48,8 +48,17 @@
                         @foreach($data[$i]->competitions as $competition)
                             <td>{{$competition->competition_name}}</td>
                         @endforeach
+                        @if($data[$i]->payment_proof == "true")
+                            <td>
+                                Already
+                            </td>
+                        @else
+                            <td>
+                                Not Yet
+                            </td>
+                        @endif
                         <td>
-                            <button type="submit" onclick="asd()" class="btn btn-danger">Delete</button>
+                            <button type="submit" onclick="" class="btn btn-danger">Delete</button>
                         </td>
                     </form>
                 </tr>

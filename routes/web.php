@@ -45,9 +45,8 @@ Route::group(['middleware' => ['web', 'adminAuth', 'checkStaffRegis']], function
 
     Route::resource('/AdminKompekPage/Case', 'CasefileController');
 
-    Route::get('/AdminKompekPage/Answer', function () {
-        return view('adminanswer');
-    });
+    Route::get('/AdminKompekPage/Answer', "ParticipantController@showAnswers");
+    Route::get('/AdminKompekPage/AnswerDelete/{id}',"ParticipantController@deleteAnswer");
 
     Route::resource('/AdminKompekPage/Announcement', "AnnouncementController");
     Route::get('/AdminKompekPage/AnnouncementDelete/{id}', "AnnouncementController@destroy");

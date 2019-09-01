@@ -28,22 +28,25 @@
             </tr>
             </thead>
             <tbody>
+            @for($i = 0; $i < count($data); $i++)
                 <tr>
-                    <td>1</td>
-                    <td>BINUS</td>
-                    <td>Budi</td>
-                    <td>budi@gmail.com</td>
-                    <td>EQ</td>
+                    <td>{{$i+1}}</td>
+                    <td>{{$data[$i]->participant_school}}</td>
+                    <td>{{$data[$i]->participant_1}}</td>
+                    <td>{{$data[$i]->participant_1_email}}</td>
+                    @foreach($data[$i]->competitions as $competition)
+                        <td>{{$competition->competition_name}}</td>
+                    @endforeach
                     <td>
-                        <form action="" class="mb-1">
-                            <button type="button" class="btn btn-outline-danger" style="min-width: 90px">Delete</button>
+                        <form action="{{url("/AdminKompekPage/AnswerDelete/".$data[$i]->participant_id)}}" method="get" class="mb-1">
+                            <button type="submit" class="btn btn-outline-danger" style="min-width: 90px">Delete</button>
                         </form>
                         <form action="">
-                            <button type="button" class="btn btn-outline-success">Download</button>
+                            <button type="submit" class="btn btn-outline-success">Download</button>
                         </form>
                     </td>
                 </tr>
-
+            @endfor
             </tbody>
         </table>
 
