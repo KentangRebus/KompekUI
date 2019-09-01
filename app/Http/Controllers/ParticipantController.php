@@ -70,6 +70,8 @@ class ParticipantController extends Controller
         $data->participant_2 = $request->participant_2;
         $data->participant_3 = $request->participant_3;
         $data->participant_phone = $request->phone;
+        $data->payment_proof = "true";
+        $data->registration_form = true;
         $data->save();
 
         $detail = new RegistrationDetail();
