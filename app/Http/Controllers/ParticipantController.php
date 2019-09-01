@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Answer;
+use Illuminate\Support\Facades\DB;
 use Mail;
 use App\Participant;
 use App\RegistrationDetail;

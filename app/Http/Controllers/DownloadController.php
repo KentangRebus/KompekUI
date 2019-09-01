@@ -29,4 +29,32 @@ class DownloadController extends Controller
         return response()->download($path);
     }
 
+//    buat download participant answernya
+    function dlParticipantAnswer($participant_school, $participant_1, $participant_1_email){
+        $data = DB::table('participant')
+            ->where('participant_school', $participant_school)
+            ->where('participant_1', $participant_1)
+            ->where('participant_1_email', $participant_1_email)
+            ->first();
+
+        if($data == null)
+            return redirect('/AdminKompekPage/Answer');
+
+        $dst = "storage/app/".$participant_school.$participant_1.".zip";
+
+        $zipper = new Zipper();
+        $zipper->make($dst)->add('../storage/app/answer/'.$participant_school.$participant_1)->close();
+
+        return response()->download($dst);
+    }
+
+    function dlAllParticipantAnswer(){
+        $dst = 'storage/app/AllAnswer.zip';
+
+        $zipper = new Zipper();
+        $zipper->make($dst)->add('../storage/app/answer')->close();
+
+        return response()->download($dst);
+    }
+
 }
