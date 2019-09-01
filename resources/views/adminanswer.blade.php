@@ -12,7 +12,7 @@
     <div class="pl-4 pr-2">
         <h1 class="text-center mt-3">Manage Answer</h1>
         <div class="mt-5 mb-3">
-            <form action="">
+            <form action="/AdminKompekPage/Download/AllAnswer">
                 <button type="submit" class="btn btn-primary">Download All Answer</button>
             </form>
         </div>
@@ -41,7 +41,7 @@
                         <form action="{{url("/AdminKompekPage/AnswerDelete/".$data[$i]->participant_id)}}" method="get" class="mb-1">
                             <button type="submit" class="btn btn-outline-danger" style="min-width: 90px">Delete</button>
                         </form>
-                        <form action="">
+                        <form action="/AdminKompekPage/Download/Answer/{{$data[$i]->participant_school}}/{{$data[$i]->participant_1}}/{{$data[$i]->participant_1_email}}">
                             <button type="submit" class="btn btn-outline-success">Download</button>
                         </form>
                     </td>
