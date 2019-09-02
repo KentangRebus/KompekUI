@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' =>['checkStaffRegis']], function(){
     Route::get('/', function () {
         return view('commingsoon');
     });
+
+Route::group(['middleware' =>['checkStaffRegis']], function(){
 
     Route::get('/Home', 'HomeController@index');
 

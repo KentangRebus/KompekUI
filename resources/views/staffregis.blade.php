@@ -134,6 +134,7 @@
                         </table>
                     </div>
                     <div class="w-50">
+                        <h2 class="ml-4 pl-3 mb-4" style="border-left: 6px solid #b60000; color: black;">Interview Schedule</h2>
                         <table id="timeTable" border="0" style="margin: 10px 0 10px 20px; ">
                             <tr>
                                 <th> Shift</th>

@@ -10,27 +10,26 @@
     <script src="{{asset('js/slideShow.js')}}"></script>
 @stop
 
-
 @section('content')
     <div class="mb-5">
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="{{asset('images/slide/1.JPG')}}" style="width:100%">
+                <img src="{{asset('images/slide/1.jpg')}}" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="{{asset('images/slide/3.JPG')}}" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="{{asset('images/slide/4.JPG')}}" style="width:100%">
+                <img src="{{asset('images/slide/4.jpg')}}" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="{{asset('images/slide/5.JPG')}}" style="width:100%">
+                <img src="{{asset('images/slide/5.jpg')}}" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="{{asset('images/slide/7.JPG')}}" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="{{asset('images/slide/8.JPG')}}" style="width:100%">
+                <img src="{{asset('images/slide/8.jpg')}}" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="{{asset('images/slide/9.JPG')}}" style="width:100%">
@@ -39,8 +38,8 @@
         </div>
         <div class="text">
             <img id="mainLogo" src="{{asset('images/K22_logo_wh.png')}}" alt="">
-            <h2 class="text-wh" style="margin-top: 10px">AMPLIFY:Optimizing the Leading Sectors</h2>
-            <h2 class="text-wh">to Amplify National Economic Resilience</h2>
+            <h2 class="text-wh" style="margin:0 auto; padding-top: 15px; border-top: 2px solid white; width: 600px; font-weight: bold;">AMPLIFY: Optimizing the Leading Sectors</h2>
+            <h2 class="text-wh" style="margin:0 auto; padding-bottom: 15px; border-bottom: 2px solid white; width: 600px; font-weight: bold;">to Amplify National Economic Resilience</h2>
             <p style="margin-top: 30px">
                 KOMPeK adalah kompetisi ekonomi berskala nasional yang diadakan oleh mahasiswa Fakultas Ekonomi dan Bisnis Universitas Indonesia untuk siswa-siswi SMA/sederajat dari seluruh Indonesia. Sejalan dengan visinya memberikan kontribusi nyata untuk perkembangan pendidikan yang berkualitas di Indonesia, KOMPeK merupakan sebuah bentuk pengabdian entitas Fakultas Ekonomi dan Bisnis Universitas Indonesia pada dunia pendidikan Indonesia.
             </p>
@@ -66,7 +65,7 @@
                     <p align="left" class="mt-4">
                         “Memberikan pengalaman pertama untuksiswa SMA dalam ekonomidan bisnis serta meningkatkan pengetahuan dan minat dalam mempelajari ekonomi.”
                         <br>
-                        <div class="fs-13 font-weight-bold text-lg-left mt-3">
+                        <div class="fs-13 font-weight-bold text-lg-left mt-3 pl-3" style="border-left: 6px solid #b60000">
                             Marie Elka Pangestu
                             <br>
                             Former Minister of Tourism and Creative Industry (2011-2014)
@@ -79,7 +78,7 @@
                     <p align="left" class="mt-4">
                         “Memberikan pengalaman pertama untuksiswa SMA dalam ekonomidan bisnis serta meningkatkan pengetahuan dan minat dalam mempelajari ekonomi.”
                         <br>
-                    <div class="fs-13 font-weight-bold text-lg-left mt-3">
+                    <div class="fs-13 font-weight-bold text-lg-left mt-3 pl-3" style="border-left: 6px solid #b60000">
                         Gita Irawan Wirjawan
                         <br>
                         Former Minister of Trade (2011-2014)
@@ -92,7 +91,7 @@
                     <p align="left" class="mt-4">
                         "KOMPeK merupakan acara yang komprehensif mengingat cakupannya yang luas yaitu se-Indonesia, serta sebagai sarana pengetahuan praktis dalam aplikasi ilmu ekonomi untuk murid SMA sederajat"
                         <br>
-                    <div class="fs-13 font-weight-bold text-lg-left mt-3">
+                    <div class="fs-13 font-weight-bold text-lg-left mt-3 pl-3" style="border-left: 6px solid #b60000">
                         Prof. Rhenald Khasali
                         <br>
                         Founder of Rumah Perubahan

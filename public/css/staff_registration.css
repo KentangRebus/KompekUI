@@ -79,7 +79,7 @@ table#timeTable tr:nth-child(odd) {
     position: absolute;
     top: 0;
     left: 0;
-    height: 22.8px;
+    height: 22px;
     width: 100%;
     background-color: transparent;
 }
