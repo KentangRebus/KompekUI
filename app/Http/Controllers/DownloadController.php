@@ -14,7 +14,9 @@ class DownloadController extends Controller
     }
 
     function dlParticipantFile(){
-        $dst = 'storage/app/participantFile.zip';
+        $zipName = uniqid();
+        $dst = 'storage/app/'.$zipName.'.zip';
+//        $dst = 'storage/app/participantFile.zip';
 
         $zipper = new Zipper();
         $zipper->make($dst)->add('../storage/app/participant')->close();
