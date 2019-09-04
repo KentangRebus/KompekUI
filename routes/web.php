@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' =>['checkStaffRegis']], function(){
     Route::get('/', function () {
         return view('commingsoon');
     });
+
+Route::group(['middleware' =>['checkStaffRegis']], function(){
 
     Route::get('/Home', 'HomeController@index');
 
@@ -59,6 +60,8 @@ Route::group(['middleware' => ['web', 'adminAuth', 'checkStaffRegis']], function
 
     Route::get('/AdminKompekPage/LogOut', 'AdminController@logOut');
     Route::get('/AdminKompekPage/Download/Participant', 'DownloadController@dlParticipantFile');
+    Route::get('/AdminKompekPage/Download/AllAnswer', 'DownloadController@dlAllParticipantAnswer');
+    Route::get('/AdminKompekPage/Download/Answer/{participant_school}/{participant_1}/{participant_1_email}', 'DownloadController@dlParticipantAnswer');
 });
 
 

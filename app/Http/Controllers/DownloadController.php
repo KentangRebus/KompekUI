@@ -14,7 +14,9 @@ class DownloadController extends Controller
     }
 
     function dlParticipantFile(){
-        $dst = 'storage/app/participantFile.zip';
+        $zipName = uniqid();
+        $dst = 'storage/app/'.$zipName.'.zip';
+//        $dst = 'storage/app/participantFile.zip';
 
         $zipper = new Zipper();
         $zipper->make($dst)->add('../storage/app/participant')->close();
@@ -31,6 +33,7 @@ class DownloadController extends Controller
 
 //    buat download participant answernya
     function dlParticipantAnswer($participant_school, $participant_1, $participant_1_email){
+
         $data = DB::table('participant')
             ->where('participant_school', $participant_school)
             ->where('participant_1', $participant_1)

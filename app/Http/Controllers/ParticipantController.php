@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Answer;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Mail;
 use App\Participant;
 use App\RegistrationDetail;
@@ -202,8 +204,10 @@ class ParticipantController extends Controller
      */
     public function destroy($id)
     {
-        Participant::destroy($id);
+        $data = Participant::find($id);
 
+        Storage::deleteDirectory('participant/'.$data->participant_school.$data->participant_1);
+        Participant::destroy($id);
         return redirect('AdminKompekPage/Participant');
     }
 }

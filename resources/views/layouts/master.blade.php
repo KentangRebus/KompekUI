@@ -53,9 +53,9 @@
             <div class="">
                 <h5>KOMPeK 22nd:Amplify</h5>
                 <div class="d-flex flex-row mt-5">
-                    <a style="color: white !important;" href="https://www.instagram.com/kompekfebui/?hl=en" class="soc-item"><i class="fab fa-instagram"></i></a>
-                    <a style="color: white !important;" href="https://www.facebook.com/kompekfebui/" class="soc-item"><i class="fab fa-facebook-f"></i></a>
-                    <a style="color: white !important;" href="https://twitter.com/kompekfebui?lang=en" class="soc-item"><i class="fab fa-twitter"></i></a>
+                    <a style="color: white !important;" href="https://www.instagram.com/kompekfebui/?hl=en" target="_blank" class="soc-item"><i class="fab fa-instagram"></i></a>
+                    <a style="color: white !important;" href="https://www.facebook.com/kompekfebui/" target="_blank" class="soc-item"><i class="fab fa-facebook-f"></i></a>
+                    <a style="color: white !important;" href="https://twitter.com/kompekfebui?lang=en" target="_blank" class="soc-item"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div>
@@ -95,13 +95,13 @@
                 <div class="d-flex flex-row ">
                     <i class="fas fa-file-signature"></i>
                     <div class="pl-2">
-                        <a href="" style="color: white !important;">Registration</a>
+                        <a href="/CompetitionRegistration" style="color: white !important;">Registration</a>
                     </div>
                 </div>
                 <div class="d-flex flex-row ">
                     <i class="fas fa-question"></i>
                     <div class="pl-3">
-                        <a href="" style="color: white !important;">FAQ</a>
+                        <a href="/FAQ" style="color: white !important;">FAQ</a>
                     </div>
                 </div>
             </div>

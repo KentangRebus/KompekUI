@@ -15,7 +15,7 @@ class StaffController extends Controller
     public function index()
     {
         $data = Staff::all();
-
+        $time = [];
         foreach ($data as $d){
             $time[] = explode(',',$d->time_available,5);
         }
