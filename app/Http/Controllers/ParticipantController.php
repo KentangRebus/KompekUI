@@ -92,7 +92,7 @@ class ParticipantController extends Controller
         try {
             Mail::send('email', ["msg" => ""], function ($msg) use ($request) {
                 $msg->subject("Kompek FEB UI Register Success");
-                $msg->from('public.relation@kompek-febui.com', 'Kompek FEB UI Staff');
+                $msg->from('public.relation@kompek-febui.com', 'Public Relation KOMPeK 22');
                 $msg->to($request->email);
             });
 //             return redirect('Home')->with('alert-success','Email Sent');

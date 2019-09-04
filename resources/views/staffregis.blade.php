@@ -20,7 +20,7 @@
             <div class="heading">
                 <span id="identifier" class="color-black fw-bold"> &nbsp; Staff Recruitment </span>
             </div>
-            <form method="post" action="{{url("/AdminKompekPage/Staff")}}">
+            <form method="post" action="{{url("/Staff")}}">
                 @csrf
                 <div id="mid-content" class="dis-flex">
                     <div class="w-50">

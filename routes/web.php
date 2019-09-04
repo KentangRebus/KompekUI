@@ -15,6 +15,7 @@ Route::group(['middleware' =>['checkStaffRegis']], function(){
     Route::get('/StaffRegistrationForm', function () {
         return view('staffregis');
     });
+    Route::post('/Staff', "StaffController@store");
 
     Route::get('/CompetitionRegistration', function () {
         return view('competitionregis');
