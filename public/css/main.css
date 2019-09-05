@@ -1,3 +1,138 @@
+
+@media only screen and (max-width: 500px) {
+  header{
+    width: 100%;
+  }
+  header nav ul li{
+    width: 100%;
+  }
+  header nav ul{
+    padding: 0;
+  }
+  header nav {
+    width: 100%;
+    margin: 0 !important;
+    display: none !important;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .comp-container{
+    width: 100% !important;
+  }
+
+  .comp-title{
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .comp-item{
+    width: 90% !important;
+  }
+
+  .show{
+    display: block !important;
+  }
+
+  .dropdown-content a{
+    width: 100% !important;
+    display: block !important;
+    margin-top: 20px;
+  }
+
+  .dropdown {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .dropdown-content{
+      position: unset !important;
+    width: 100%;
+  }
+
+  .comp-title h1{
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+
+  .r-m-t{
+    margin-top: 50px;
+  }
+
+  #mainLogo{
+    width: 250px !important;
+  }
+
+  #announcement-container{
+    width: 100% !important;
+  }
+
+  #announcement-container h2{
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  #testimonial-container{
+    width: 100% !important;
+  }
+
+  #timeline-container{
+    width: 100% !important;
+  }
+
+  #timeline-container img{
+    width: 100% !important;
+  }
+
+  .res-center{
+    text-align: center;
+    justify-content: center;
+  }
+
+  .responsive-f-col{
+    flex-direction: column !important;
+  }
+
+  .r-w-100{
+    width: 100%;
+  }
+
+  .sub-title{
+    font-size: 20px;
+    width: 100% !important;
+  }
+
+  .burger{
+    display: block !important;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 9;
+  }
+
+}
+
+.up-line{
+  border-top: 2px solid white;
+}
+
+.bot-line{
+  border-bottom: 2px solid white;
+}
+
+.sub-title{
+  margin:0 auto;
+  width: 600px;
+  font-weight: bold;
+}
+
+.burger{
+  display: none;
+}
+
 header{
   background-color: darkred;
   color: white;
@@ -165,7 +300,7 @@ footer {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 80px;
+  top: 0px;
 }
 
 .text p {
@@ -177,6 +312,7 @@ footer {
 
 #mainLogo{
   width: 350px;
+  height: auto;
 }
 
 .bdr-red{
@@ -201,7 +337,13 @@ footer {
   width: 90px;
   position: absolute;
   left: 70px;
-  bottom: -580px;
+}
+
+.background-element{
+  background: url("../images/bg02.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 #announcement-container{
