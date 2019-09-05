@@ -109,6 +109,9 @@
             <div class="dis-flex flex-c flex-m">
                 <button type="submit" id="register_btn" class=""> Submit</button>
             </div>
+            <div class="text-center">
+                <small>Please wait until the upload complete, don't spam the button</small>
+            </div>
         </form>
 
     </div>

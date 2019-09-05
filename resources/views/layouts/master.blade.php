@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <link rel="icon" href="{{asset('images/K22_logo.png')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/all.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/brands.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/fontawesome.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome/solid.min.css')}}">

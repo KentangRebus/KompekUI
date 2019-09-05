@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="d-flex flex-row text-dr p-5 justify-content-md-around mb-5 background-element responsive-f-col">
-            <div class="bdr-red" id="announcement-container">
+            <div class="bdr-red" id="announcement-container" style="overflow: scroll;">
                 <h2 style="border-bottom: 2px solid; font-weight: bold" class="mb-4">Announcement</h2>
                 @foreach($data as $d)
                     <div class="ann-item mb-4">
