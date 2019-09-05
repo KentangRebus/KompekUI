@@ -20,7 +20,7 @@
             <div class="heading">
                 <span id="identifier" class="color-black fw-bold"> &nbsp; Staff Recruitment </span>
             </div>
-            <form method="post" action="{{url("/Staff")}}">
+            <form method="post" id="staffRegisForm">
                 @csrf
                 <div id="mid-content" class="dis-flex">
                     <div class="w-50">
@@ -33,7 +33,8 @@
                             </tr>
                             <tr>
                                 <td class="color-black lbl"> Student ID</td>
-                                <td><input type="text" name="staff_student_id" id="id_txt" class="input-field" required></td>
+                                <td><input type="text" name="staff_student_id" id="id_txt" class="input-field" required>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="color-black lbl"> Program</td>
@@ -129,12 +130,22 @@
                                         </option>
                                     </select>
                                 </td>
+                                <td>
+                                    <div id="error_lbl" style="display: none; width: 450px; right: 0; position: fixed;"
+                                         class="alert alert-danger" role="alert">
+                                        Cannot select same choice!
+                                    </div>
+                                </td>
                             </tr>
+
                             </tbody>
                         </table>
+
                     </div>
+
                     <div class="w-50">
-                        <h2 class="ml-4 pl-3 mb-4" style="border-left: 6px solid #b60000; color: black;">Interview Schedule</h2>
+                        <h2 class="ml-4 pl-3 mb-4" style="border-left: 6px solid #b60000; color: black;">Interview
+                            Schedule</h2>
                         <table id="timeTable" border="0" style="margin: 10px 0 10px 20px; ">
                             <tr>
                                 <th> Shift</th>
@@ -312,9 +323,7 @@
                             <tr>
                                 <td colspan="6">
                                     <p class="color-black">Note: Please select 5 time you're available in </p>
-                                    @if(!empty($message))
-                                        <p id="error" style="color: red">{{$message}}</p>
-                                    @endif
+                                    <label id="error" style="color: red" for=""></label>
                                 </td>
                             </tr>
                         </table>
@@ -322,7 +331,7 @@
                 </div>
 
                 <div class="dis-flex flex-c flex-m">
-                    <button type="submit" id="register_staff_btn" class=""> Register</button>
+                    <button type="button" onclick="checkChoice()" id="register_staff_btn" class=""> Register</button>
                 </div>
             </form>
         </div>
@@ -353,6 +362,29 @@
                 for (let j = 0; j < checkboxes.length; j++) {
                     checkboxes[j].disabled = false;
                 }
+            }
+        }
+
+        function checkChoice() {
+            first = document.getElementById('1_choice_option').value;
+            second = document.getElementById('2_choice_option').value;
+            third = document.getElementById('3_choice_option').value;
+            if (first == second || second == third || first == third) {
+                document.getElementById('error_lbl').style.display = "block";
+                setTimeout(function () {
+                    $('#error_lbl').fadeOut('fast');
+                }, 3000);
+                return false;
+            }
+            else if (check != 5) {
+                document.getElementById('error').innerHTML = "You must at least check 5 available times";
+                return false;
+            }
+            else {
+                document.getElementById('error').innerHTML = "";
+                document.getElementById("staffRegisForm").action = "/Staff";
+                document.getElementById("staffRegisForm").submit();
+                return true;
             }
         }
 
