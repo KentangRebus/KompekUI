@@ -8,15 +8,15 @@
 
 @section('content')
     <div id="content" class="pt-5 pb-5 pl-5">
-            <div id="identifier" class="heading">
-                <span class="color-black fw-bold"> &nbsp Competition Registration </span>
-            </div>
+        <div id="identifier" class="heading">
+            <span class="color-black fw-bold"> &nbsp Competition Registration </span>
+        </div>
 
-        <form action="/Participant" method="post" enctype="multipart/form-data">
+        <form method="post" action="{{url("/Participant")}}" enctype="multipart/form-data">
             @csrf
             <div id="mid-content" class="dis-flex">
                 <div class="w-50">
-                    <table style="margin: 10px 0 10px 20px; border-spacing: 0 15px; border-collapse: separate;;">
+                    <table style="margin: 10px 0 10px 20px; border-spacing: 0 15px; border-collapse: separate;">
                         <tbody>
                         <tr>
                             <td class="color-black lbl td-w-250"> School</td>
@@ -24,7 +24,8 @@
                         </tr>
                         <tr>
                             <td rowspan="2" class="color-black lbl"> Accompanying <br> Teacher</td>
-                            <td rowspan="2"><input type="text" name="teacher" id="teacher_txt" class="input-field" required></td>
+                            <td rowspan="2"><input type="text" name="teacher" id="teacher_txt" class="input-field"
+                                                   required></td>
                         </tr>
                         <tr>
                         </tr>
@@ -45,11 +46,13 @@
                         </tr>
                         <tr>
                             <td class="color-black lbl "> Delegate 2</td>
-                            <td><input type="text" name="participant_2" id="delegate2_txt" class="input-field" required></td>
+                            <td><input type="text" name="participant_2" id="delegate2_txt" class="input-field" required>
+                            </td>
                         </tr>
                         <tr>
                             <td class="color-black lbl "> Delegate 3</td>
-                            <td><input type="text" name="participant_3" id="delegate3_txt" class="input-field" required></td>
+                            <td><input type="text" name="participant_3" id="delegate3_txt" class="input-field" required>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -58,14 +61,14 @@
                     <table style="margin: 10px 0 10px 20px; border-spacing: 0 15px; border-collapse: separate">
                         <tbody>
                         <tr>
-                            <td class="color-black lbl td-w-250 pad"> Competition </td>
+                            <td class="color-black lbl td-w-250 pad"> Competition</td>
                             <td>
                                 <select id="competition_option" class="option-field" name="competition"
-                                    style="">
-                                    <option value = "1"> EQ </option>
-                                    <option value = "2"> EDC </option>
-                                    <option value = "3"> BC </option>
-                                    <option value = "4"> ERP </option>
+                                        style="">
+                                    <option value="1"> EQ</option>
+                                    <option value="2"> EDC</option>
+                                    <option value="3"> BC</option>
+                                    <option value="4"> ERP</option>
                                 </select>
                             </td>
                         </tr>
@@ -86,14 +89,15 @@
                         <tr>
                             <td class="color-black lbl pad"> Proof of Payment</td>
                             <td>
-                                <input class="upload-btn" type="file" name="payment_file" id="upload_payment_btn">
+                                <input class="upload-btn" type="file" name="payment_file" id="upload_payment_btn"
+                                       required>
                                 <small>File must be .pdf format and less then 200MB</small>
                             </td>
                         </tr>
                         <tr>
                             <td class="color-black lbl pad"> Registration Form</td>
                             <td>
-                                <input class=" upload-btn" type="file" name="regis_file" id="upload_form_btn">
+                                <input class=" upload-btn" type="file" name="regis_file" id="upload_form_btn" required>
                                 <small>File must be .pdf format and less then 200MB</small>
                             </td>
 
@@ -108,4 +112,8 @@
         </form>
 
     </div>
+    <script>
+
+
+    </script>
 @stop
