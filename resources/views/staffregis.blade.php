@@ -15,7 +15,7 @@
 @stop
 
 @section('content')
-    <div>
+    <div id="content" class="p-5">
         <div class="heading">
             <span id="identifier" class="color-black fw-bold"> &nbsp; Staff Recruitment </span>
         </div>
