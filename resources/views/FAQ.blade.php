@@ -26,8 +26,8 @@
             <div class="mt-5">
                 <h3 class="text-dr mb-3">FAQ Registration</h3>
                 <ul class="pt-3 mb-4">
-                    <li class="question-tag mb-2 text-dr">Q : Bagaimana pendaftar dapat mengakses booklet KOMPek 22?</li>
-                    <li class="answer-tag">A : Booklet KOMPek 22 dapat di download di link yang tersedia di Announcement di Website www.kompek-febui.com</li>
+                    <li class="question-tag mb-2 text-dr">Q : Bagaimana pendaftar dapat mengakses guidance book KOMPek 22?</li>
+                    <li class="answer-tag">A : Guidance book KOMPek 22 dapat di download di link yang tersedia di Announcement di Website www.kompek-febui.com</li>
                 </ul>
                 <ul class="pt-3 mb-4">
                     <li class="question-tag mb-2 text-dr">Q : Bagaimana pendaftar dapat mengakses Registration Form KOMPeK 22?</li>
@@ -35,7 +35,7 @@
                 </ul>
                 <ul class="pt-3 mb-4">
                     <li class="question-tag mb-2 text-dr">Q : Proof of Payment dikirim dalam bentuk apa kemana?</li>
-                    <li class="answer-tag">A : Proof of Payment diupload bersamaan dengan data diri saat registrasi awal dalam format foto (png atau jpg).</li>
+                    <li class="answer-tag">A : Proof of Payment diupload bersamaan dengan data diri saat registrasi awal dalam format pdf (.pdf).</li>
                 </ul>
                 <ul class="pt-3 mb-4">
                     <li class="question-tag text-dr">Apabila pembayaran dilakukan bersama-sama untuk satu sekolah yang mengirimkan jumlah tim lebih dari satu, maka setiap tim juga harus mengirimkan bukti pembayaran yang sama tersebut.</li>

@@ -321,7 +321,6 @@
                         </tr>
                     </table>
                 </div>
-            </div>
 
             <div class="dis-flex flex-c flex-m">
                 <button type="submit" onclick="" id="register_staff_btn" class=""> Register</button>

@@ -23,28 +23,28 @@
 
         <div class="flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1">
             <div class="flex-col-c-m wsize2 m-b-20">
-                <span class="l1-txt2 p-b-4 days">0</span>
+                <span class="l1-txt2 p-b-4 days">00</span>
                 <span class="m2-txt2">Days</span>
             </div>
 
             <span class="l1-txt2 p-b-22">:</span>
 
             <div class="flex-col-c-m wsize2 m-b-20">
-                <span class="l1-txt2 p-b-4 hours">0</span>
+                <span class="l1-txt2 p-b-4 hours">00</span>
                 <span class="m2-txt2">Hours</span>
             </div>
 
             <span class="l1-txt2 p-b-22 respon2">:</span>
 
             <div class="flex-col-c-m wsize2 m-b-20">
-                <span class="l1-txt2 p-b-4 minutes">0</span>
+                <span class="l1-txt2 p-b-4 minutes">00</span>
                 <span class="m2-txt2">Minutes</span>
             </div>
 
             <span class="l1-txt2 p-b-22">:</span>
 
             <div class="flex-col-c-m wsize2 m-b-20">
-                <span class="l1-txt2 p-b-4 seconds">0</span>
+                <span class="l1-txt2 p-b-4 seconds">00</span>
                 <span class="m2-txt2">Seconds</span>
             </div>
         </div>
@@ -86,14 +86,14 @@
         secondsSpan[0].innerHTML = ('00'+seconds).slice(-2);
 
         // If the count down is over
-        if (distance < 0) {
+        if (distance <= 0) {
             clearInterval(timeinterval);
         }
 
     }
 
-    updateClock();
-    var timeinterval = setInterval(updateClock, 500);
+    // updateClock();
+    // var timeinterval = setInterval(updateClock, 500);
 
 </script>
 </body>

@@ -11,7 +11,7 @@
 @stop
 
 @section('content')
-    <div class="mb-5">
+    <div class="pb-5">
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <img src="{{asset('images/slide/1.jpg')}}" style="width:100%">
@@ -35,19 +35,18 @@
                 <img src="{{asset('images/slide/9.JPG')}}" style="width:100%">
             </div>
             <div class="coverColor"></div>
+            <div class="text">
+                <img id="mainLogo" src="{{asset('images/K22_logo_wh.png')}}" alt="">
+                <h2 class="text-wh r-w-100 sub-title pt-2 up-line" style="">AMPLIFY: Optimizing the Leading Sectors</h2>
+                <h2 class="text-wh r-w-100 sub-title pb-3 bot-line" style="">to Amplify National Economic Resilience</h2>
+                <p style="margin-top: 30px">
+                    KOMPeK adalah kompetisi ekonomi berskala nasional yang diadakan oleh mahasiswa Fakultas Ekonomi dan Bisnis Universitas Indonesia untuk siswa-siswi SMA/sederajat dari seluruh Indonesia. Sejalan dengan visinya memberikan kontribusi nyata untuk perkembangan pendidikan yang berkualitas di Indonesia, KOMPeK merupakan sebuah bentuk pengabdian entitas Fakultas Ekonomi dan Bisnis Universitas Indonesia pada dunia pendidikan Indonesia.
+                </p>
+            </div>
         </div>
-        <div class="text">
-            <img id="mainLogo" src="{{asset('images/K22_logo_wh.png')}}" alt="">
-            <h2 class="text-wh" style="margin:0 auto; padding-top: 15px; border-top: 2px solid white; width: 600px; font-weight: bold;">AMPLIFY: Optimizing the Leading Sectors</h2>
-            <h2 class="text-wh" style="margin:0 auto; padding-bottom: 15px; border-bottom: 2px solid white; width: 600px; font-weight: bold;">to Amplify National Economic Resilience</h2>
-            <p style="margin-top: 30px">
-                KOMPeK adalah kompetisi ekonomi berskala nasional yang diadakan oleh mahasiswa Fakultas Ekonomi dan Bisnis Universitas Indonesia untuk siswa-siswi SMA/sederajat dari seluruh Indonesia. Sejalan dengan visinya memberikan kontribusi nyata untuk perkembangan pendidikan yang berkualitas di Indonesia, KOMPeK merupakan sebuah bentuk pengabdian entitas Fakultas Ekonomi dan Bisnis Universitas Indonesia pada dunia pendidikan Indonesia.
-            </p>
-        </div>
-        <div class="d-flex flex-row text-dr p-5 justify-content-md-around mb-5">
-            <div class="bdr-red" id="announcement-container">
+        <div class="d-flex flex-row text-dr p-5 justify-content-md-around mb-5 background-element responsive-f-col">
+            <div class="bdr-red" id="announcement-container" style="overflow: scroll;">
                 <h2 style="border-bottom: 2px solid; font-weight: bold" class="mb-4">Announcement</h2>
-                <img src="{{asset('images/ring1.png')}}" alt="" class="rings">
                 @foreach($data as $d)
                     <div class="ann-item mb-4">
                         <p>
@@ -56,14 +55,13 @@
                         <hr>
                     </div>
                 @endforeach
-
             </div>
-            <div class="bdr-red" id="testimonial-container">
+            <div class="bdr-red r-m-t" id="testimonial-container">
 
                 <div class="testi-item testimonialSlides fade">
                     <img src="{{asset('images/testimonials/Bu Marie Elka.png')}}" alt="" class="mb-2">
                     <p align="left" class="mt-4">
-                        “Memberikan pengalaman pertama untuksiswa SMA dalam ekonomidan bisnis serta meningkatkan pengetahuan dan minat dalam mempelajari ekonomi.”
+                        “Memberikan pengalaman pertama untuk siswa SMA dalam ekonomi dan bisnis serta meningkatkan pengetahuan dan minat dalam mempelajari ekonomi.”
                         <br>
                         <div class="fs-13 font-weight-bold text-lg-left mt-3 pl-3" style="border-left: 6px solid #b60000">
                             Marie Elka Pangestu
@@ -76,7 +74,7 @@
                 <div class="testi-item testimonialSlides fade">
                     <img src="{{asset('images/testimonials/Pak Gita.png')}}" alt="" class="mb-2">
                     <p align="left" class="mt-4">
-                        “Memberikan pengalaman pertama untuksiswa SMA dalam ekonomidan bisnis serta meningkatkan pengetahuan dan minat dalam mempelajari ekonomi.”
+                        "KOMPeK is a great opportunity for high school students throughout the country to expand their knowledge, especially in the economic field."
                         <br>
                     <div class="fs-13 font-weight-bold text-lg-left mt-3 pl-3" style="border-left: 6px solid #b60000">
                         Gita Irawan Wirjawan
@@ -99,7 +97,7 @@
                     </p>
                 </div>
             </div>
-            <div id="timeline-container">
+            <div class="r-m-t" id="timeline-container">
                 <h2>TIMELINE</h2>
 
                 <img src="{{asset('images/timeline.png')}}" alt="" style="width: 450px">
@@ -109,7 +107,9 @@
         <div class="pl-5 pr-5 pt-5 pb-5">
             <hr>
         </div>
-        <div class="mt-5 flex-row flex-lg-wrap comp-container" style="background: url("{{ asset('images/patternHome.png') }}"); ">
+        <div class="background-element">
+
+        <div class="mt-5 flex-row flex-lg-wrap comp-container responsive-f-col">
             <div class="text-dr comp-title">
                 <h1 class="comp-hvr">EQ</h1>
                 <div class="bdr-red comp-item">
@@ -146,6 +146,7 @@
                     </p>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 @stop
