@@ -331,7 +331,7 @@
                 </div>
 
                 <div class="dis-flex flex-c flex-m">
-                    <button type="button" onclick="checkChoice()" id="register_staff_btn" class=""> Register</button>
+                    <button type="button" id="register_staff_btn" class=""> Register</button>
                 </div>
             </form>
         </div>
