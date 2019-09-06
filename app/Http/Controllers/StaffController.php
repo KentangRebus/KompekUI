@@ -53,10 +53,6 @@ class StaffController extends Controller
         $available_time = $request->time;
         $time = $available_time[0];
 
-        if($data->choice_1 == $data->choice_2 || $data->choice_1 == $data->choice_3 || $data->choice_2 == $data->choice_3){
-            return view('staffregis')->with("err_message","Please choose 3 different choices");
-        }
-
         if(count($available_time) < 5){
            return view('staffregis')->with("message","Please select minimal 5 time");
         }
