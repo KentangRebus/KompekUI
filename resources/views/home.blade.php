@@ -50,14 +50,13 @@
                 @foreach($data as $d)
                     <div class="ann-item mb-4">
                         <p>
-                            {{ $d->announcement }}
+                            {!! $d->announcement !!}
                         </p>
                         <hr>
                     </div>
                 @endforeach
             </div>
             <div class="bdr-red r-m-t" id="testimonial-container">
-
                 <div class="testi-item testimonialSlides fade">
                     <img src="{{asset('images/testimonials/Bu Marie Elka.png')}}" alt="" class="mb-2">
                     <p align="left" class="mt-4">

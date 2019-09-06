@@ -38,7 +38,6 @@ class AnnouncementController extends Controller
     {
         $data = new Announcement();
         $data->announcement = $request->announcement;
-
         $data->save();
 
         return redirect('AdminKompekPage/Announcement');

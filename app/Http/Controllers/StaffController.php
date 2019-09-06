@@ -62,6 +62,7 @@ class StaffController extends Controller
         }
 
         $data->time_available = $time;
+//        dd($data);
         $data->save();
 
         return redirect('Home')->with("successMessage", "Success Register");
