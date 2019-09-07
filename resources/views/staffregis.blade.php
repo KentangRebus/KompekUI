@@ -320,11 +320,17 @@
                         </tr>
                     </table>
                 </div>
+
             </div>
             <div class="dis-flex flex-c flex-m">
                 <button type="submit" onclick="" id="register_staff_btn" class=""> Register</button>
             </div>
         </form>
+        @if(session()->has('msg'))
+            <div id="success_lbl" style="margin-top: 15px; text-align: center; " class="alert alert-success" role="alert">
+                {{ session()->get('msg') }}! You can go to our <a href="Home" class="alert-link">Home</a> or <a href="FAQ" class="alert-link">FAQ</a> to know more about us!
+            </div>
+        @endif
     </div>
     </div>
 
@@ -372,6 +378,9 @@
             }
         }
 
+        if(document.getElementById('success_lbl').style.display == 'block'){
+            alert("heyo")
+        }
 
     </script>
 @stop

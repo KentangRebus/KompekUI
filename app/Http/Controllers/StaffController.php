@@ -65,7 +65,7 @@ class StaffController extends Controller
 //        dd($data);
         $data->save();
 
-        return redirect('Home')->with("successMessage", "Success Register");
+        return redirect('StaffRegistrationForm')->with("msg", "Success Register");
     }
 
     /**

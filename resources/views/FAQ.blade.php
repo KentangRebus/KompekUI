@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Home')
+@section('title', 'FAQ')
 
 @section('content')
     <img src="{{asset('images/element1.png')}}" alt="" style="width: 100%; opacity: 0.1; position: absolute;">

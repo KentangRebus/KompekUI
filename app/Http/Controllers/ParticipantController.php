@@ -135,10 +135,10 @@ class ParticipantController extends Controller
             $credentialLetter = $request->file('credential_letter');
             $credentialLetter->storeAs('/answer/' . $folderName, 'credential_letter.zip');
 
-            return redirect('/Home');
+            return redirect('UploadAnswer')->with('msg', "Success Upload Answer");
         }
 
-        return redirect('UploadAnswer');
+//        return redirect('UploadAnswer');
     }
 
     public function showAnswers(){

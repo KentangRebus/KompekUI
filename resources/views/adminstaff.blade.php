@@ -29,7 +29,7 @@
             <tbody>
             @for($i = 0; $i < count($data); $i++)
                 <tr>
-                    <form method="get" action="/Staff">
+                    <form method="get" action="{{url("/AdminKompekPage/StaffDelete/".$data[$i]->staff_id)}}">
                         @csrf
                         <td>{{$data[$i]->staff_student_id}}</td>
                         <td>{{$data[$i]->staff_name}}</td>
