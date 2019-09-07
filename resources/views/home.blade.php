@@ -39,7 +39,7 @@
                 <img id="mainLogo" src="{{asset('images/K22_logo_wh.png')}}" alt="">
                 <h2 class="text-wh r-w-100 sub-title pt-2 up-line" style="">AMPLIFY: Optimizing the Leading Sectors</h2>
                 <h2 class="text-wh r-w-100 sub-title pb-3 bot-line" style="">to Amplify National Economic Resilience</h2>
-                <p style="margin-top: 30px">
+                <p style="margin-top: 30px;" class="small-text-res">
                     KOMPeK adalah kompetisi ekonomi berskala nasional yang diadakan oleh mahasiswa Fakultas Ekonomi dan Bisnis Universitas Indonesia untuk siswa-siswi SMA/sederajat dari seluruh Indonesia. Sejalan dengan visinya memberikan kontribusi nyata untuk perkembangan pendidikan yang berkualitas di Indonesia, KOMPeK merupakan sebuah bentuk pengabdian entitas Fakultas Ekonomi dan Bisnis Universitas Indonesia pada dunia pendidikan Indonesia.
                 </p>
             </div>

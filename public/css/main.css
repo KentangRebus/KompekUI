@@ -19,6 +19,10 @@
     text-align: center;
   }
 
+  .small-text-res{
+    font-size: 14px;
+  }
+
   .comp-container{
     width: 100% !important;
   }
@@ -63,7 +67,7 @@
   }
 
   #mainLogo{
-    width: 250px !important;
+    width: 200px !important;
   }
 
   #announcement-container{
@@ -101,14 +105,14 @@
   }
 
   .sub-title{
-    font-size: 20px;
+    font-size: 18px;
     width: 100% !important;
   }
 
   .burger{
     display: block !important;
     position: absolute;
-    top: 5px;
+    top: 2px;
     right: 5px;
     z-index: 9;
   }
@@ -151,6 +155,7 @@ header nav {
 
 header img{
   width: 130px;
+  height: 74px;
   margin-left: 30px;
   padding: 10px;
   cursor: pointer;
