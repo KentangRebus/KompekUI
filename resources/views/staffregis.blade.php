@@ -32,7 +32,7 @@
                         </tr>
                         <tr>
                             <td class="color-black lbl"> Student ID</td>
-                            <td><input type="text" name="staff_student_id" id="id_txt" class="input-field" required>
+                            <td><input type="text" name="staff_student_id" id="id_txt" class="input-field" maxlength="10" required>
                             </td>
                         </tr>
                         <tr>
@@ -62,7 +62,7 @@
                                     <option value="Event"> Event</option>
                                     <option value="Liaison Officer"> Liaison Officer</option>
                                     <option value="Economic Research Paper"> Economic Research Paper</option>
-                                    <option value="Business Case"> Business Case</option>
+                                    <option value="Business Challenge"> Business Challenge</option>
                                     <option value="Economic Quiz"> Economic Quiz</option>
                                     <option value="Economic Debate Competition"> Economic Debate Competition
                                     </option>
@@ -87,7 +87,7 @@
                                     <option value="Event"> Event</option>
                                     <option value="Liaison Officer"> Liaison Officer</option>
                                     <option value="Economic Research Paper"> Economic Research Paper</option>
-                                    <option value="Business Case"> Business Case</option>
+                                    <option value="Business Challenge"> Business Challenge</option>
                                     <option value="Economic Quiz"> Economic Quiz</option>
                                     <option value="Economic Debate Competition"> Economic Debate Competition
                                     </option>
@@ -112,7 +112,7 @@
                                     <option value="Event"> Event</option>
                                     <option value="Liaison Officer"> Liaison Officer</option>
                                     <option value="Economic Research Paper"> Economic Research Paper</option>
-                                    <option value="Business Case"> Business Case</option>
+                                    <option value="Business Challenge"> Business Challenge</option>
                                     <option value="Economic Quiz"> Economic Quiz</option>
                                     <option value="Economic Debate Competition"> Economic Debate Competition
                                     </option>
