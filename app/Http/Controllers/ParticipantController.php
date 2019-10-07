@@ -129,7 +129,6 @@ class ParticipantController extends Controller
         }
 
         if ($participant->exists()) {
-            dd('asdasda');
             $id = $participant->first()->participant_id;
             $curr_participant = Participant::find($id);
 
