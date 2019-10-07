@@ -13,8 +13,11 @@
         <div id="content">
             <h1 style="color: black; padding-left: 20px; margin-bottom: 50px;">Upload Competition File</h1>
 
-            <div class="heading">
+            <div class="heading" style="float: left">
                 <span id="identifier" class="color-black fw-bold"> Requirements </span>
+            </div>
+            <div style="color: #cb0000; width: 50%; margin-left: auto; padding: 20px">
+                    Make sure you fill the form with the same data when you registered your team <br> and wait until the notification below SUBMIT button after you finish your registration.
             </div>
             <form action="/Answer" method="post" enctype="multipart/form-data">
                 @csrf
@@ -69,7 +72,7 @@
                             <tr>
                                 <td class="color-black td-w-250 lbl"> Competition File</td>
                                 <td><input class="upload-btn" type="file" name="competition_file"
-                                           id="competition_upload_btn" required></td>
+                                           id="competition_upload_btn" required accept="application/zip"></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -86,7 +89,7 @@
                             <tr>
                                 <td class="color-black td-w-250 lbl pad-6"> Letter of Credentials</td>
                                 <td><input class="upload-btn" type="file" name="credential_letter"
-                                           id="letter_upload_btn" required></td>
+                                           id="letter_upload_btn" required accept="application/zip"></td>
                             </tr>
                             <tr>
                                 <td></td>

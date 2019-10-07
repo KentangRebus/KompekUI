@@ -113,6 +113,16 @@ class ParticipantController extends Controller
 
     public function uploadCompetition(Request $request)
     {
+        $competition_file = $request->file('competition_file');
+        $credentialLetter = $request->file('credential_letter');
+
+        if (pathinfo($_FILES['competition_file']['name'])['extension'] != 'zip') {
+            return redirect('UploadAnswer')->with('error', "Competition File Must be in .zip format");
+        }
+        else if (pathinfo($_FILES['credential_letter']['name'])['extension'] != 'zip') {
+            return redirect('UploadAnswer')->with('error', "Registration File Must be in .zip format");
+        }
+
         $request->validate([
             'credential_letter' => 'required|mimes:zip,rar|max:300000',
             'competition_file' => 'required|mimes:zip,rar|max:300000',
@@ -136,16 +146,13 @@ class ParticipantController extends Controller
             $curr_participant->credential_file = "true";
             $curr_participant->save();
 
-            $competition_file = $request->file('competition_file');
             $competition_file->storeAs('/answer/' . $folderName, 'competition_file.zip');
 
-            $credentialLetter = $request->file('credential_letter');
             $credentialLetter->storeAs('/answer/' . $folderName, 'credential_letter.zip');
 
             return redirect('UploadAnswer')->with('msg', "Success Upload Answer");
         }
 
-//        return redirect('UploadAnswer');
     }
 
     public function showAnswers(){

@@ -49,6 +49,7 @@
                             <td><input type="text" name="participant_2" id="delegate2_txt" class="input-field" required>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
                             <td class="color-black lbl "> Delegate 3</td>
                             <td><input type="text" name="participant_3" id="delegate3_txt" class="input-field" required>
@@ -60,6 +61,10 @@
                 <div class="w-50">
                     <table style="margin: 10px 0 10px 20px; border-spacing: 0 15px; border-collapse: separate">
                         <tbody>
+                        <tbody>
+                        <tr>
+                            <td colspan="2" style="padding-right: 25px; color: #cb0000;">Complete your registration to get the notification and link for dowloading <br> the competition materials</td>
+                        </tr>
                         <tr>
                             <td class="color-black lbl td-w-250 pad"> Competition</td>
                             <td>
