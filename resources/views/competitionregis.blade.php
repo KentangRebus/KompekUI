@@ -75,7 +75,7 @@
                         <tr>
                             <td colspan="2">
                         <span class="color-light-red"> Choose your competition. Please download the following
-                            <a class="color-light-red fw-bold decor-u" href="/Form/Download"> Registration Form </a>
+                            <b><a class="color-light-red fw-bold decor-u" href="/Form/Download"> Registration Form </a></b>
                         </span>
                             </td>
                         </tr>
@@ -90,14 +90,14 @@
                             <td class="color-black lbl pad"> Proof of Payment</td>
                             <td>
                                 <input class="upload-btn" type="file" name="payment_file" id="upload_payment_btn"
-                                       required>
+                                       required  accept="application/pdf">
                                 <small>File must be .pdf format and less then 200MB</small>
                             </td>
                         </tr>
                         <tr>
                             <td class="color-black lbl pad"> Registration Form</td>
                             <td>
-                                <input class=" upload-btn" type="file" name="regis_file" id="upload_form_btn" required>
+                                <input class=" upload-btn" type="file" name="regis_file" id="upload_form_btn" required  accept="application/pdf">
                                 <small>File must be .pdf format and less then 200MB</small>
                             </td>
 
@@ -110,9 +110,14 @@
                 <button type="submit" id="register_btn" class=""> Submit</button>
             </div>
         </form>
-        @if(session()->has('msg'))
-            <div id="success_lbl" style="margin-top: 15px; text-align: center; " class="alert alert-success" role="alert">
-                {{ session()->get('msg') }}! You can go to our <a href="Home" class="alert-link">Home</a> or <a href="FAQ" class="alert-link">FAQ</a> to know more about us!
+        @if(session()->has('error'))
+            <div class="alert alert-danger mt-3">
+                {{session()->get('error')}}
+            </div>
+        @endif
+        @if(session()->has('download'))
+            <div id="success_lbl" style="margin-top: 15px; text-align: center; " class="alert alert-success mt-3" role="alert">
+                Registration Complete! Please download the case here: <b><a href="{{session()->get('download')}}"> CLICK HERE </a></b>
             </div>
         @endif
     </div>

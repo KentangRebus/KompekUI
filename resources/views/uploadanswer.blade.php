@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Registration')
+@section('title', 'Upload')
 
 @section('more_link')
     <link rel="stylesheet" type="text/css" href="{{asset('css/upload_competition.css')}}">
@@ -106,6 +106,12 @@
                     <small>Please wait until the upload complete, don't spam the button</small>
                 </div>
             </form>
+            @if(session()->has('error'))
+                <div id="success_lbl" style="margin-top: 15px; text-align: center;" class="alert alert-danger"
+                     role="alert">
+                    {{session()->get('error')}}
+                </div>
+            @endif
             @if(session()->has('msg'))
                 <div id="success_lbl" style="margin-top: 15px; text-align: center;" class="alert alert-success"
                      role="alert">

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Registration')
+@section('title', 'Staff Registration')
 
 @section('more_link')
     <link rel="stylesheet" type="text/css" href="{{asset('css/staff_registration.css')}}">

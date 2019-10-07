@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>@yield('title')</title>
+    <title>KOMPeK FEB UI 22 | @yield('title')</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="description" content="Welcome to Official Website The 22nd KOMPek FEB UI. Get to Know us More Here!">

@@ -10,6 +10,7 @@ use Mail;
 use App\Participant;
 use App\RegistrationDetail;
 use Illuminate\Http\Request;
+use mysql_xdevapi\Session;
 
 class ParticipantController extends Controller
 {
@@ -61,10 +62,15 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'payment_file' => 'required|mimes:pdf|max:300000',
-            'regis_file' => 'required|mimes:pdf|max:300000',
-        ]);
+        $paymentFile = $request->file('payment_file');
+        $regisFile = $request->file('regis_file');
+
+        if (pathinfo($_FILES['payment_file']['name'])['extension'] != 'pdf') {
+            return redirect('CompetitionRegistration')->with('error', "Payment File Must be in .pdf format");
+        }
+        else if (pathinfo($_FILES['regis_file']['name'])['extension'] != 'pdf') {
+            return redirect('CompetitionRegistration')->with('error', "Registration File Must be in .pdf format");
+        }
 
         $data = new Participant();
         $data->participant_school = $request->school;
@@ -85,10 +91,8 @@ class ParticipantController extends Controller
 
         $folderName = $request->school . $request->head;
 
-        $paymentFile = $request->file('payment_file');
         $paymentFile->storeAs('/participant/' . $folderName, 'PaymentFile.pdf');
 
-        $regisFile = $request->file('regis_file');
         $regisFile->storeAs('/participant/' . $folderName, 'RegisterForm.pdf');
 
         try {
@@ -103,9 +107,8 @@ class ParticipantController extends Controller
 
         $comp = ['EQ', 'EDC', 'BC', 'ERP'];
         $case = $comp[$request->competition - 1];
-        return redirect("/Case/$case");
-
-//        return redirect('/Home');
+        request()->session()->put("success", "Regsitration Success");
+        return redirect('CompetitionRegistration')->with('download', "/Case/$case");
     }
 
     public function uploadCompetition(Request $request)
@@ -121,7 +124,12 @@ class ParticipantController extends Controller
             ->where('participant_1', '=', $request->head)
             ->where('participant_1_email', '=', $request->email);
 
+        if ( !$participant->exists()){
+            return redirect('UploadAnswer')->with('error', "Participant data not match, please check you data again");
+        }
+
         if ($participant->exists()) {
+            dd('asdasda');
             $id = $participant->first()->participant_id;
             $curr_participant = Participant::find($id);
 

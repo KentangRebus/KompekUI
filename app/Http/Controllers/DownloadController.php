@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Chumper\Zipper\Zipper;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use mysql_xdevapi\Session;
 
 class DownloadController extends Controller
 {
     function dlRegistrationForm(){
-        return Storage::download('/form/dummyFile.pdf');
+        return Storage::download('/form/REGISTRATION FORM KOMPeK 22.pdf');
 //        return redirect('/CompetitionRegistration');
     }
 
